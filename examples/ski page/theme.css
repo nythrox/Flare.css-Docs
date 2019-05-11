@@ -49,12 +49,11 @@ p {
 }
 
 header {
-  background: url(heel.png) no-repeat bottom, url(layer.png);
+  background: url(img/heel.png) no-repeat bottom, url(img/layer.png);
   background-size: 100% auto, cover;
   background-attachment: scroll, fixed;
   color: white;
   font-family: "Muli";
-  position: relative;
   padding-bottom: 40px;
 }
 .mountains {
@@ -86,7 +85,6 @@ header::after {
   font-family: "Catamaran";
   font-weight: 900;
 
-  position: absolute;
   top: 100px;
   right: 0;
   left: 0;
@@ -99,7 +97,7 @@ header::after {
 }
 .header-content {
   padding-top: 150px;
-  z-index: 4;
+  z-index: 7;
 }
 .menu {
   z-index: 999;
@@ -127,15 +125,12 @@ header::after {
   padding: 25px;
 }
 .header-parallax {
-  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
 }
 .header-description {
   z-index: 3;
-  position: relative;
-
   font-size: 18px;
   line-height: 25px;
   font-family: "Muli";
@@ -155,11 +150,13 @@ header::after {
   display: inline-block;
   font-weight: 600;
   transition: 0.1s linear;
+  z-index:90;
   margin-top: 20px;
 }
 .btn-bg-red:hover {
   mix-blend-mode: screen;
-  border-color: white;
+  background: #00aeff;
+  border: 2px solid #00aeff;
   color: white;
 }
 .offers {
@@ -253,13 +250,13 @@ text-align: center;
 
 
 .hero {
-	background:url(hero.png) bottom;
+	background:url(img/hero.png) bottom;
 	background-size: cover;
 	padding:100px 20px; 
 }
 @media(max-width:901px) {
   .hero {
-    background:url(hero.png) top;
+    background:url(img/hero.png) top;
     background-size: auto 160%;
 }
 }
@@ -324,5 +321,5 @@ footer p {
 	margin-bottom:20px;
 }
 .maps{
-	background: url(map.png)
+	background: url(img/map.png)
 }
