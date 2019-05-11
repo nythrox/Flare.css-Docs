@@ -109,9 +109,6 @@ p {
     color: #000;
     transition:background-color .3s;
 }
-.primary-button:hover {
-    background-color: #f1bc4d;
-}
 a {
     color:black;   
     font-family: 'Work Sans';
