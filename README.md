@@ -1,19 +1,15 @@
 <p align="center">
-  <a href="https://nythrox.github.io/Flare.css/">
-    <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
+  <a href="https://github.com/nythrox/Flare.css/">
+    <img src="https://github.com/nythrox/Flare.css-Docs/blob/master/logo-cropped.png" alt="Flare logo" width="80">
   </a>
 </p>
 <h3 align="center">Flare.css</h3>
 <p align="center">
   Modern lightweight CSS layout framework for faster and professional web development.
-  <br>
-  <a href="https://nythrox.github.io/Flare.css/docs"><strong>Explore Bootstrap docs »</strong></a>
-  <br>
 </p>
-
-<p align="center">
-</p>
-<h1>Features</h1>
+<b>
+<a href="https://nythrox.github.io/Flare.css/">Documentation with Visual Examples »</a>
+</b>
 <h2>About Flare</h2>
 Flare is a lightweight and modern CSS library that allows you to create responsive layouts with less code, gives you more sizing options and features automatic responsiveness, all without restricting your code.
 <h2>Automatic Responsiveness and Manual Responsiveness</h2>
