@@ -1,0 +1,919 @@
+/*
+> * means column
+example
+.container > * {}
+means
+.container > .column {}
+that way column can mean anything, or doesnt even need to have a div
+*/
+* {
+	box-sizing: border-box;
+}
+
+
+img {
+	max-width:100%;
+}
+
+html { 
+	font-size: 1em;
+    }	
+    
+
+/*---------------*/
+.flexbox {
+    width:100%;
+    display:flex;
+    margin-right:auto;
+    margin-left:auto;
+}
+.row {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    align-items:flex-start;
+    align-content:flex-start;
+    justify-content:flex-start;
+} /*use row instead of container*/
+.row:not(.flexbox) > *{
+    min-width: 0
+    /*min-width: auto*/
+}
+.row > * { /*used to be .container > .column*/
+    width:100%;
+    flex-grow:0;
+}
+.row:not(.fluid){
+    padding-right:25px;
+    padding-left:25px;
+}
+.row .row {
+    padding-right:0;
+    padding-left:0;
+}
+.container, .small, .middle, [class*="size-"]{
+    margin-right:auto;
+    margin-left:auto;
+}
+/*-----------container rules--------*/
+    
+.fluid {
+    max-width:none;
+    width:100%;
+}
+/*------------------container attributes------------*/
+.nomax {max-width:100%;}
+.fullheight {height:100vh;}
+/*stretch, grow, etc for containers and columns*/
+.mx-auto > * {margin:auto;}
+.self-mx-auto {margin:auto;}
+
+.grow > * {flex-grow:1!important;}
+.self-grow {flex-grow:1!important;}
+
+.nogrow > *{flex-grow:0!important;} 
+.self-nogrow{flex-grow:0!important}
+
+.shrink > * {flex-shrink:1!important}
+.self-shrink > * {flex-shrink:1!important}
+
+.noshrink > * {flex-shrink:0!important}
+.self-noshrink > * {flex-shrink:0!important}
+
+.stretch {align-items: stretch!important}
+.content-stretch {align-content: stretch!important}
+.self-stretch{align-self:stretch!important} 
+
+.nostretch{align-items:flex-start!important;}
+.content-nostretch{align-content:flex-start!important;}
+.self-nostretch{align-self:flex-start!important}
+
+/*positioning(right, left, top, bottom, middle) for containers*/
+.normal {align-items:flex-start!important;justify-content:flex-start!important;} 
+
+.left {justify-content: flex-start!important}
+.float-left, .self-left {
+    margin-right:auto;
+    margin-left:0;
+}
+
+.right {justify-content: flex-end!important}
+.float-right, .self-right {
+    margin-left:auto;
+    margin-right:0;
+} 
+.center {justify-content: center!important}
+.between, .space-between {justify-content: space-between!important}
+.around, .space-around {justify-content: space-around!important}
+
+.self-top{align-self:flex-start!important}
+.self-middle{align-self:center!important}
+.self-bottom{align-self:flex-end!important}
+
+.top{align-items:flex-start!important}
+.middle{align-items:center!important}
+.bottom{align-items:flex-end!important}
+/*content treats each line of the flexbox, instead of each column individually*/
+.content-stretch {align-content: stretch!important}
+.content-middle {align-content:center!important}
+.content-bottom {align-content:flex-end!important}
+.content-top {align-content:flex-start!important}
+
+.all-center {align-items:center;justify-content:center;text-align:center;}
+.items-centralized {align-items:center;justify-content:center;}
+.content-centralized {align-content:center;justify-content:center;}
+
+.text-center {text-align:center}
+
+
+/**/
+[class*="break"]{
+    height:0px!important;
+    padding:0px!important;
+    margin:0px!important;
+    min-height: 0px!important;
+    border:0px!important;
+}
+.break {
+    width: 100%!important;
+}
+.fill {/*size will be whateaver is left over*/
+	width:0%!important;
+	flex-grow:1!important;
+}
+.auto { /*size will depend on its content (flexbox default)*/
+    min-width:auto;
+	width:auto;
+	flex-grow:initial;
+}
+.equal > *{
+    width:0%;
+    flex-grow:1;
+}
+.singleline {
+	flex-wrap:nowrap;
+}
+
+ /*@media(max-width:767px) phones and small tablets - small containers */
+ 
+.flexbox > *{
+    flex-grow:1;
+}
+.flexbox.multiline {
+    flex-wrap:wrap;
+}
+.flexbox[class*="equal-"]{
+    flex-wrap:wrap;
+}
+.equal > *{
+    width:100%;
+}
+
+ .flexbox {flex-wrap:wrap;}
+ 
+    .container {
+        width:100%;
+        /* padding-right:8%;
+        padding-left:8%; */
+        max-width:540px;
+    }
+    
+    .medium {
+        width:100%;
+        max-width:570px;
+    }
+    .small {
+        width:100%;
+        max-width:630px;
+    }
+    
+/*---------------------------automatic responsivenes----------------*/
+
+.offset-right-one{margin-right:6.25%}
+.offset-right-two{margin-right:12.5%}
+.offset-right-three{margin-right:18.75%}
+.offset-right-four, .offset-right-quarter{margin-right:25%}
+.offset-right-five{margin-right:31.25%}
+.offset-right-six{margin-right:37.5%}
+.offset-right-seven{margin-right:43.75%}
+.offset-right-eight, .offset-right-half{margin-right:50%}
+.offset-right-nine{margin-right:56.25%}
+.offset-right-ten{margin-right:62.5%}
+.offset-right-eleven{margin-right:68.75%}
+.offset-right-twelve{margin-right:75%}
+.offset-right-thirteen{margin-right:81.25%}
+.offset-right-fourteen{margin-right:87.5%}
+.offset-right-fifteen{margin-right:93.75%}
+.offset-right-sixteen, .offset-right-full{margin-right:100%}
+
+.offset-left-one{margin-left:6.25%}
+.offset-left-two{margin-left:12.5%}
+.offset-left-three{margin-left:18.75%}
+.offset-left-four, .offset-left-quarter{margin-left:25%}
+.offset-left-five{margin-left:31.25%}
+.offset-left-six{margin-left:37.5%}
+.offset-left-seven{margin-left:43.75%}
+.offset-left-eight, .offset-left-half{margin-left:50%}
+.offset-left-nine{margin-left:56.25%}
+.offset-left-ten{margin-left:62.5%}
+.offset-left-eleven{margin-left:68.75%}
+.offset-left-twelve{margin-left:75%}
+.offset-left-thirteen{margin-left:81.25%}
+.offset-left-fourteen{margin-left:87.5%}
+.offset-left-fifteen{margin-left:93.75%}
+.offset-left-sixteen, .offset-left-full{margin-left:100%}
+   
+.size-one 										{width:25%}
+.size-two			 								{width:25%}
+.size-three 									{width:50%}
+.size-four,  .size-quarter 	{width:50%}
+.size-five 										{width:100%}
+.size-six 										{width:100%}
+.size-seven 									{width:100%}
+.size-eight,  .size-half 		{width:100%} /*in mobile, 50% becomes 100%*/
+.size-nine 										{width:100%}
+.size-ten 										{width:100%}
+.size-eleven 									{width:100%}
+.size-twelve			 						{width:100%}
+.size-thirteen 								{width:100%}
+.size-fourteen 								{width:100%}
+.size-fifteen 								{width:100%}
+.size-sixteen, .size-full 					{width:100%}
+
+.equal-one > *    {width:100%; }
+.equal-two > *    {width:100%;}
+.equal-three > *  {width:100%;}
+.equal-four > *   {width:100%;}
+.equal-five > *   {width:100%;}
+.equal-six > *    {width:50%;}
+.equal-seven > *  {width:33.333333%;}
+.equal-eight > *  {width:33.333333%;}
+.equal-nine > *   {width:33.333333%;}
+.equal-ten > *    {width:33.333333%;}
+.equal-eleven > * {width:33.333333%;}
+.equal-twelve > * {width:25%;}
+
+.one{width:25%}
+.two{width:25%}
+.three{width:50%}
+.four, .quarter{width:50%}
+.five{width:100%}
+.six{width:100%}
+.seven{width:100%}
+.eight, .half{width:100%;}
+.nine{width:100%}
+.ten{width:100%}
+.eleven{width:100%}
+.twelve{width:100%}
+.thirteen{width:100%}
+.fourteen{width:100%}
+.fifteen{width:100%}
+.sixteen, .full{width:100%}
+
+.m-equal-one > *        {width:100%; }
+.m-equal-two > *        {width:50%; }
+.m-equal-three > *      {width:33.3333333%;}
+.m-equal-four > *       {width:25%;}
+.m-equal-five > *       {width:20%;} 
+.m-equal-six > *        {width:16.6666667%;}
+.m-equal-seven > *      {width:14.2%;}
+.m-equal-eight > *      {width:12.5%;}
+.m-equal-nine > *       {width:11.111111111%;}
+.m-equal-ten > *        {width:10%;}
+.m-equal-eleven > *     {width:9.09090909%;}
+.m-equal-twelve > *     {width:8.3333333%;}
+
+/*specific definition of responsiveness by user, user usually should not have to use*/
+.m-one{width:6.25%}
+.m-two{width:12.5%}
+.m-three{width:18.75%}
+.m-four, .m-quarter{width:25%}
+.m-five{width:31.25%}
+.m-six{width:37.5%}
+.m-seven{width:43.75%}
+.m-eight, .m-half{width:50%}
+.m-nine{width:56.25%}
+.m-ten{width:62.5%}
+.m-eleven{width:68.75%}
+.m-twelve{width:75%}
+.m-thirteen{width:81.25%} 
+.m-fourteen{width:87.5%}
+.m-fifteen{width:93.75%}
+.m-sixteen, .m-full{width:100%}
+
+@media(min-width:768px){/*bigger tablets will have a computer-like layout. smaller ones will count as phones*/
+/*lots of container space so items can be side by side*/
+
+
+.container {
+    width:100%;
+        /* padding-right:2%;
+        padding-left:2%; */
+    max-width:670px;
+		}
+        
+        
+.medium {
+    width:100%;
+    max-width:600px;
+}
+	.small {
+        width:100%;
+    max-width:800px;
+    }
+    	
+
+    /*automatic responsiveness*/
+    
+	 .size-one 										{width:12.5%} /*eight in a row instead of 16*/
+	 .size-two								 	    {width:20%} /*five in a row instead of eight*/
+	 .size-three 									{width:22.2222222%;} /*four.5 instead of five. needs to be centralized*/
+	 .size-four,  .size-quarter 	                {width:33%} /*three instead of 4. needs to be centralized*/
+	 .size-five 									{width:33.33333333%} /*one instead of 3, needs to be centralized*/
+	 .size-six 										{width:55%} /*one instead of two, needs to be centralized*/
+	 .size-seven 									{width:60%}/*one instead of two, needs to be centralized*/
+	 .size-eight,  .size-half		 	            {width:65%}/*two instead of twom	*/
+     .size-nine 									{width:70%}
+	 .size-ten 										{width:75%}
+	 .size-eleven 									{width:80%}
+	 .size-twelve 									{width:85%}
+	 .size-thirteen 								{width:90%}
+	 .size-fourteen 								{width:95%}
+	 .size-fifteen 							    	{width:97.25%}
+     .size-sixteen, .size-full 					    {width:100%}	
+     
+
+	.equal-two > *        {width:100%; }
+	.equal-three > *      {width:100%;}
+	.equal-four > *       {width:50%;}
+	.equal-five > *       {width:33.3333333%;}
+	.equal-six > *        {width:33.3333333%;}
+	.equal-seven > *      {width:33.3333333%;}
+	.equal-eight > *      {width:25%;}
+	.equal-nine > *       {width:25%;}
+	.equal-ten > *        {width:20%;}
+	.equal-eleven > *     {width:20%;}
+    .equal-twelve > *     {width:16.6666667%;}
+
+	.one{width:12.5%}
+	.two{width:20%}
+	.three{width:22.2222222%;}
+	.four, .quarter{width:33%}
+	.five{width:33.33333333%}
+	.six{width:50%}
+	.seven{width:100%}
+	.eight, .half{width:100%}
+	.nine{width:100%}
+	.ten{width:100%}
+	.eleven{width:100%}
+	.twelve{width:100%}
+	.thirteen{width:100%}
+	.fourteen{width:100%}
+	.fifteen{width:100%}
+	.sixteen, .full{width:100%}
+
+    .t-equal-one > *        { width:100%; }
+    .t-equal-two > *        { width:50%; }
+    .t-equal-three > *      {	width:33.3333333%;}
+    .t-equal-four > *       { width:25%;}
+    .t-equal-five > *       {width:20%;} 
+    .t-equal-six > *        {width:16.6666667%;}
+    .t-equal-seven > *      {width:14.2%;}
+    .t-equal-eight > *      {width:12.5%;}
+    .t-equal-nine > *       {width:11.111111111%;}
+    .t-equal-ten > *        {width:10%;}
+    .t-equal-eleven > *     {width:9.09090909%;}
+    .t-equal-twelve > *     {width:8.3333333%;}
+    
+	.t-one{width:6.25%}
+	.t-two{width:12.50%}
+	.t-three{width:18.75%}
+	.t-four, .t-quarter{width:25%}
+	.t-five{width:31.25%}
+	.t-six{width:37.5%}
+	.t-seven{width:43.75%}
+	.t-eight, .t-half{width:50%}
+	.t-nine{width:56.25%}
+	.t-ten{width:62.5%}
+	.t-eleven{width:68.75%}
+	.t-twelve{width:75%}
+	.t-thirteen{width:81.25%}
+	.t-fourteen{width:87.5%}
+	.t-fifteen{width:93.75%}
+	.t-sixteen, .t-full{width:100%}
+     
+}
+
+@media(min-width:901px){/*small notebooks and up*/
+
+	
+    .flexbox {
+        flex-wrap:nowrap;
+    }
+    .equal > *{
+        width:0%;
+        flex-grow:1;
+    }
+/*-----------------container types-------------*/
+
+.container {
+    width:100%;
+    max-width:900px;
+}
+.small {
+    width:100%;
+    max-width:760px;
+}
+.medium {
+    width:100%;
+    max-width:800px;
+}
+/*other*/
+
+.c-offset-right-one{margin-right:6.25%}
+.c-offset-right-two{margin-right:12.5%}
+.c-offset-right-three{margin-right:18.75%}
+.c-offset-right-four, .c-offset-right-quarter{margin-right:25%}
+.c-offset-right-five{margin-right:31.25%}
+.c-offset-right-six{margin-right:37.5%}
+.c-offset-right-seven{margin-right:43.75%}
+.c-offset-right-eight, .c-offset-right-half{margin-right:50%}
+.c-offset-right-nine{margin-right:56.25%}
+.c-offset-right-ten{margin-right:62.5%}
+.c-offset-right-eleven{margin-right:68.75%}
+.c-offset-right-twelve{margin-right:75%}
+.c-offset-right-thirteen{margin-right:81.25%}
+.c-offset-right-fourteen{margin-right:87.5%}
+.c-offset-right-fifteen{margin-right:93.75%}
+.c-offset-right-sixteen, .c-offset-right-full{margin-right:100%}
+
+.c-offset-left-one{margin-left:6.25%}
+.c-offset-left-two{margin-left:12.5%}
+.c-offset-left-three{margin-left:18.75%}
+.c-offset-left-four, .c-offset-left-quarter{margin-left:25%}
+.c-offset-left-five{margin-left:31.25%}
+.c-offset-left-six{margin-left:37.5%}
+.c-offset-left-seven{margin-left:43.75%}
+.c-offset-left-eight, .c-offset-left-half{margin-left:50%}
+.c-offset-left-nine{margin-left:56.25%}
+.c-offset-left-ten{margin-left:62.5%}
+.c-offset-left-eleven{margin-left:68.75%}
+.c-offset-left-twelve{margin-left:75%}
+.c-offset-left-thirteen{margin-left:81.25%}
+.c-offset-left-fourteen{margin-left:87.5%}
+.c-offset-left-fifteen{margin-left:93.75%}
+.c-offset-left-sixteen, .c-offset-left-full{margin-left:100%}
+
+
+    /*---------------------------automatic responsivenes----------------*/
+ 
+    .size-one 										{width:6.25%}
+    .size-two								 			{width:12.5%}
+    .size-three 									{width:18.75%}	
+    .size-four,  .size-quarter 	{width:25%}
+    .size-five 										{width:31.25%}
+    .size-six 										{width:37.5%}
+    .size-seven 									{width:43.75%}
+    .size-eight,  .size-half		 	{width:50%}
+    .size-nine 										{width:56.25%}
+    .size-ten 										{width:62.5%}
+    .size-eleven 									{width:68.75%}
+    .size-twelve 									{width:75%}
+    .size-thirteen 								{width:81.25%}
+    .size-fourteen 								{width:87.5%}
+    .size-fifteen 								{width:93.75%}
+    .size-sixteen, .size-full 					{width:100%}	
+    
+    /*you can choose to use c-equal or just equal (on lg and up only)*/
+    .equal-two > *        { width:50%; }
+    .equal-three > *      { width:33.3333333%;}
+    .equal-four > *       { width:25%;}
+    .equal-five > *       { width:20%;} 
+    .equal-six > *        { width:16.6666667%;}
+    .equal-seven > *      { width:14.2%;}
+    .equal-eight > *      { width:12.5%;}
+    .equal-nine > *       { width:11.111111111%;}
+    .equal-ten > *        { width:10%;}
+    .equal-eleven > *     { width:9.09090909%;}
+    .equal-twelve > *     { width:8.3333333%;} 
+
+
+	.one{ width:6.25%}
+	.two{ width:12.5%}
+	.three{ width:18.75%}
+	.four, .quarter{ width:25%}
+	.five{ width:31.25%}
+	.six{ width:37.5%}
+	.seven{ width:43.75%}
+	.eight, .half{ width:50%;}
+	.nine{ width:56.25%}
+	.ten{ width:62.5%}
+	.eleven{ width:68.75%}
+	.twelve{ width:75%}
+	.thirteen{ width:81.25%}
+	.fourteen{ width:87.5%}
+	.fifteen{ width:93.75%}
+    .sixteen, .full{ width:100%}
+
+
+    .c-equal-one > *        { width:100%; }
+    .c-equal-two > *        { width:50%; }
+    .c-equal-three > *      {	width:33.3333333%;}
+    .c-equal-four > *       { width:25%;}
+    .c-equal-five > *       {width:20%;} 
+    .c-equal-six > *        {width:16.6666667%;}
+    .c-equal-seven > *      {width:14.2%;}
+    .c-equal-eight > *      {width:12.5%;}
+    .c-equal-nine > *       {width:11.111111111%;}
+    .c-equal-ten > *        {width:10%;}
+    .c-equal-eleven > *     {width:9.09090909%;}
+    .c-equal-twelve > *     {width:8.3333333%;}
+ 
+	.c-one{ width:6.25%}
+	.c-two{ width:12.5%}
+	.c-three{ width:18.75%}
+	.c-four, .c-quarter{ width:25%}
+	.c-five{ width:31.25%}
+	.c-six{ width:37.5%}
+	.c-seven{ width:43.75%}
+	.c-eight, .c-half{ width:50%;}
+	.c-nine{ width:56.25%}
+	.c-ten{ width:62.5%}
+	.c-eleven{ width:68.75%}
+	.c-twelve{ width:75%}
+	.c-thirteen{ width:81.25%}
+	.c-fourteen{ width:87.5%}
+	.c-fifteen{ width:93.75%}
+    .c-sixteen, .full,.c-two{ width:100%}
+    
+	/* .c-one{width:6.25%}
+	.c-two{width:12.50%}
+	.c-three{width:18.75%}
+	.c-four, .c-quarter{width:25%}
+	.c-five{width:31.25%}
+	.c-six{width:37.5%}
+	.c-seven{width:43.75%}
+	.c-eight, .c-half{width:50%}
+	.c-nine{width:56.25%}
+	.c-ten{width:62.5%}
+	.c-eleven{width:68.75%}
+	.c-twelve{width:75%}
+	.c-thirteen{width:81.25%}
+	.c-fourteen{width:87.5%}
+	.c-fifteen{width:93.75%}
+	.c-sixteen, .c-full{width:100%} */
+
+    
+    
+    /*specific definition of responsiveness by user, user usually should not have to use*/
+}
+
+@media(min-width:1150px) { /*normal sized notebooks*/
+    
+    .container {
+        /* width:100%; */
+        max-width:1140px;
+    }
+    .small {
+        /* width:100%; */
+        max-width:900px;
+    }
+    .medium {
+        /* width:100%; */
+        max-width:1040px;
+    }
+    .lg-equal-one > *        { width:100%; }
+    .lg-equal-two > *        { width:50%; }
+    .lg-equal-three > *      {	width:33.3333333%;}
+    .lg-equal-four > *       { width:25%;}
+    .lg-equal-five > *       {width:20%;} 
+    .lg-equal-six > *        {width:16.6666667%;}
+    .lg-equal-seven > *      {width:14.2%;}
+    .lg-equal-eight > *      {width:12.5%;}
+    .lg-equal-nine > *       {width:11.111111111%;}
+    .lg-equal-ten > *        {width:10%;}
+    .lg-equal-eleven > *     {width:9.09090909%;}
+    .lg-equal-twelve > *     {width:8.3333333%;}
+    
+	.lg-one{width:6.25%}
+	.lg-two{width:12.50%}
+	.lg-three{width:18.75%}
+	.lg-four, .lg-quarter{width:25%}
+	.lg-five{width:31.25%}
+	.lg-six{width:37.5%}
+	.lg-seven{width:43.75%}
+	.lg-eight, .lg-half{width:50%}
+	.lg-nine{width:56.25%}
+	.lg-ten{width:62.5%}
+	.lg-eleven{width:68.75%}
+	.lg-twelve{width:75%}
+	.lg-thirteen{width:81.25%}
+	.lg-fourteen{width:87.5%}
+	.lg-fifteen{width:93.75%}
+	.lg-sixteen, .lg-full{width:100%}
+     
+    }
+
+    
+@media(min-width:1650px) { /*computers*/
+    
+    [class*="xl-size-"]{
+        max-width:none;
+    }
+    .container {
+        /* width:100%; */
+        max-width:1540px;
+    }
+    .small {
+        /* width:100%; */
+        max-width:1300px;
+    }
+    .medium {
+        /* width:100%; */
+        max-width:1440px;
+    }
+
+    .xl-equal-one > *        { width:100%; }
+    .xl-equal-two > *        { width:50%; }
+    .xl-equal-three > *      {	width:33.3333333%;}
+    .xl-equal-four > *       { width:25%;}
+    .xl-equal-five > *       {width:20%;} 
+    .xl-equal-six > *        {width:16.6666667%;}
+    .xl-equal-seven > *      {width:14.2%;}
+    .xl-equal-eight > *      {width:12.5%;}
+    .xl-equal-nine > *       {width:11.111111111%;}
+    .xl-equal-ten > *        {width:10%;}
+    .xl-equal-eleven > *     {width:9.09090909%;}
+    .xl-equal-twelve > *     {width:8.3333333%;}
+    
+	.xl-one{width:6.25%}
+	.xl-two{width:12.50%}
+	.xl-three{width:18.75%}
+	.xl-four, .xl-quarter{width:25%}
+	.xl-five{width:31.25%}
+	.xl-six{width:37.5%}
+	.xl-seven{width:43.75%}
+	.xl-eight, .xl-half{width:50%}
+	.xl-nine{width:56.25%}
+	.xl-ten{width:62.5%}
+	.xl-eleven{width:68.75%}
+	.xl-twelve{width:75%}
+	.xl-thirteen{width:81.25%}
+	.xl-fourteen{width:87.5%}
+	.xl-fifteen{width:93.75%}
+	.xl-sixteen, .xl-full{width:100%}   
+}
+@media(min-width:3000px) {
+    
+    .container {
+        /* width:100%; */
+        max-width:1540px;
+    }
+    .small {
+        /* width:100%; */
+        max-width:1300px;
+    }
+    .medium {
+        /* width:100%; */
+        max-width:1440px;
+    }
+
+    .xxl-equal-one > *        { width:100%; }
+    .xxl-equal-two > *        { width:50%; }
+    .xxl-equal-three > *      {	width:33.3333333%;}
+    .xxl-equal-four > *       { width:25%;}
+    .xxl-equal-five > *       {width:20%;} 
+    .xxl-equal-six > *        {width:16.6666667%;}
+    .xxl-equal-seven > *      {width:14.2%;}
+    .xxl-equal-eight > *      {width:12.5%;}
+    .xxl-equal-nine > *       {width:11.111111111%;}
+    .xxl-equal-ten > *        {width:10%;}
+    .xxl-equal-eleven > *     {width:9.09090909%;}
+    .xxl-equal-twelve > *     {width:8.3333333%;}
+    
+	.xxl-one{width:6.25%}
+	.xxl-two{width:12.50%}
+	.xxl-three{width:18.75%}
+	.xxl-four, .xxl-quarter{width:25%}
+	.xxl-five{width:31.25%}
+	.xxl-six{width:37.5%}
+	.xxl-seven{width:43.75%}
+	.xxl-eight, .xxl-half{width:50%}
+	.xxl-nine{width:56.25%}
+	.xxl-ten{width:62.5%}
+	.xxl-eleven{width:68.75%}
+	.xxl-twelve{width:75%}
+	.xxl-thirteen{width:81.25%}
+	.xxl-fourteen{width:87.5%}
+	.xxl-fifteen{width:93.75%}
+	.xxl-sixteen, .xxl-full{width:100%}
+     
+    
+    }
+
+.title {
+    width:100%!important;
+}
+@media(max-width:768px) {
+    
+	html {
+		font-size:1.15em;
+    }
+    .m-one, .m-two, .m-three, .m-four, .m-five, .m-six, .m-seven, .m-eight, .m-nine, .m-ten, .m-ten, .m-eleven, .m-twelve, .m-thirteen, .m-fourteen, .m-fifteen, .m-sixteen {
+        max-width:none;
+    }    
+
+    .m-text-center{text-align:center;}
+    .m-break {width:100%;}
+    .m-singleline {flex-wrap:nowrap;}
+    .m-multiline {flex-wrap:wrap;}
+    .m-first{order:-1;}
+    .m-last{order:999;}	
+    .m-equal > *{width:0%;flex-grow:1;}
+    
+    .m-offset-right-one{margin-right:6.25%}
+	.m-offset-right-two{margin-right:12.5%}
+	.m-offset-right-three{margin-right:18.75%}
+	.m-offset-right-four, .m-offset-right-quarter{margin-right:25%}
+	.m-offset-right-five{margin-right:31.25%}
+	.m-offset-right-six{margin-right:37.5%}
+	.m-offset-right-seven{margin-right:43.75%}
+	.m-offset-right-eight, .m-offset-right-half{margin-right:50%}
+	.m-offset-right-nine{margin-right:56.25%}
+	.m-offset-right-ten{margin-right:62.5%}
+	.m-offset-right-eleven{margin-right:68.75%}
+	.m-offset-right-twelve{margin-right:75%}
+	.m-offset-right-thirteen{margin-right:81.25%}
+	.m-offset-right-fourteen{margin-right:87.5%}
+	.m-offset-right-fifteen{margin-right:93.75%}
+	.m-offset-right-sixteen, .m-offset-right-full{margin-right:100%}
+ 
+	.m-offset-left-one{margin-left:6.25%}
+	.m-offset-left-two{margin-left:12.5%}
+	.m-offset-left-three{margin-left:18.75%}
+	.m-offset-left-four, .m-offset-left-quarter{margin-left:25%}
+	.m-offset-left-five{margin-left:31.25%}
+	.m-offset-left-six{margin-left:37.5%}
+	.m-offset-left-seven{margin-left:43.75%}
+	.m-offset-left-eight, .m-offset-left-half{margin-left:50%}
+	.m-offset-left-nine{margin-left:56.25%}
+	.m-offset-left-ten{margin-left:62.5%}
+	.m-offset-left-eleven{margin-left:68.75%}
+	.m-offset-left-twelve{margin-left:75%}
+	.m-offset-left-thirteen{margin-left:81.25%}
+	.m-offset-left-fourteen{margin-left:87.5%}
+	.m-offset-left-fifteen{margin-left:93.75%}
+	.m-offset-left-sixteen, .m-offset-left-full{margin-left:100%}
+	
+    .m-hide {
+        display:none!important;
+    }
+}
+@media(min-width:768px) and (max-width:900px){
+    html {
+        font-size:0.9em;
+    }
+    .t-one, .t-two, .t-three, .t-four, .t-five, .t-six, .t-seven, .t-eight, .t-nine, .t-ten, .t-ten, .t-eleven, .t-twelve, .t-thirteen, .t-fourteen, .t-fifteen, .t-sixteen {
+        max-width:none;
+    }
+
+    .t-text-center{text-align:center;}
+    .t-break {width:100%;}
+    .t-singleline {flex-wrap:nowrap;}
+    .t-multiline {flex-wrap:wrap;}
+	.t-first {order:-1;}
+    .t-last {order:999;}
+    .t-equal > *{width:0%;flex-grow:1;}	
+    .stack-first{
+        order:-1;
+    }
+    
+    .stack-last{
+        order:999;
+    }
+    
+	.stack-first{
+		order:-1;
+    }
+	.stack-last{
+		order:999;
+    }
+    
+    .t-hide {
+        display:none!important;
+    }
+	.t-offset-right-one{margin-right:6.25%}
+	.t-offset-right-two{margin-right:12.5%}
+	.t-offset-right-three{margin-right:18.75%}
+	.t-offset-right-four, .t-offset-right-quarter{margin-right:25%}
+	.t-offset-right-five{margin-right:31.25%}
+	.t-offset-right-six{margin-right:37.5%}
+	.t-offset-right-seven{margin-right:43.75%}
+	.t-offset-right-eight, .t-offset-right-half{margin-right:50%}
+	.t-offset-right-nine{margin-right:56.25%}
+	.t-offset-right-ten{margin-right:62.5%}
+	.t-offset-right-eleven{margin-right:68.75%}
+	.t-offset-right-twelve{margin-right:75%}
+	.t-offset-right-thirteen{margin-right:81.25%}
+	.t-offset-right-fourteen{margin-right:87.5%}
+	.t-offset-right-fifteen{margin-right:93.75%}
+	.t-offset-right-sixteen, .t-offset-right-full{margin-right:100%}
+ 
+	.t-offset-left-one{margin-left:6.25%}
+	.t-offset-left-two{margin-left:12.5%}
+	.t-offset-left-three{margin-left:18.75%}
+	.t-offset-left-four, .t-offset-left-quarter{margin-left:25%}
+	.t-offset-left-five{margin-left:31.25%}
+	.t-offset-left-six{margin-left:37.5%}
+	.t-offset-left-seven{margin-left:43.75%}
+	.t-offset-left-eight, .t-offset-left-half{margin-left:50%}
+	.t-offset-left-nine{margin-left:56.25%}
+	.t-offset-left-ten{margin-left:62.5%}
+	.t-offset-left-eleven{margin-left:68.75%}
+	.t-offset-left-twelve{margin-left:75%}
+	.t-offset-left-thirteen{margin-left:81.25%}
+	.t-offset-left-fourteen{margin-left:87.5%}	
+	.t-offset-left-fifteen{margin-left:93.75%}
+	.t-offset-left-sixteen, .t-offset-left-full{margin-left:100%}
+	
+}
+
+@media(min-width:901px) and (max-width:1149px){
+    /*if its a number, and its on m-, then please dont have a max width*/
+    
+}
+
+@media(min-width:901px){ /*C AND UP*/
+.c-one, .c-two, .c-three, .c-four, .c-five, .c-six, .c-seven, .c-eight, .c-nine, .c-ten, .c-ten, .c-eleven, .c-twelve, .c-thirteen, .c-fourteen, .c-fifteen, .c-sixteen {
+    max-width:none;
+}
+.c-hide {
+    display:none;
+}   
+.c-text-center{text-align:center;}
+.c-break {width:100%;}
+.c-singleline {flex-wrap:nowrap;}
+.c-multiline {flex-wrap:wrap;}
+.c-equal > *{width:0%;flex-grow:1;}
+.c-first {order:-1;}
+.c-last {order:999;}
+
+}
+@media(min-width:1150px) and (max-width:1649px){
+    
+}
+
+@media(min-width:1150px){/*LG AND UP*/   
+.lg-one, .lg-two, .lg-three, .lg-four, .lg-five, .lg-six, .lg-seven, .lg-eight, .lg-nine, .lg-ten, .lg-ten, .lg-eleven, .lg-twelve, .lg-thirteen, .lg-fourteen, .lg-fifteen, .lg-sixteen {
+    max-width:none;
+}
+
+.lg-text-center{text-align:center;}
+.lg-break {width:100%;}
+.lg-singleline {flex-wrap:nowrap;}
+.lg-multiline {flex-wrap:wrap;} 
+.lg-equal > *{width:0%;flex-grow:1;}
+.lg-first {order:-1;}
+.lg-last {order:999;}
+}
+@media(min-width:1650px) and (max-width:2999px){
+    
+}
+@media(min-width:1650px) { /*XL AND UP*/
+    .xl-one, .xl-two, .xl-three, .xl-four, .xl-five, .xl-six, .xl-seven, .xl-eight, .xl-nine, .xl-ten, .xl-ten, .xl-eleven, .xl-twelve, .xl-thirteen, .xl-fourteen, .xl-fifteen, .xl-sixteen {
+        max-width:none;
+    } 
+    .xl-text-center{text-align:center;}
+    .xl-break {width:100%;}
+    .xl-singleline {flex-wrap:nowrap;}
+    .xl-multiline {flex-wrap:wrap;}
+    .xl-equal > *{width:0%;flex-grow:1;}
+	.xl-first {order:-1;}
+    .xl-last {order:999;}
+}
+@media(min-width:3000px){ /*xxl and up*/
+    .xxl-one, .xxl-two, .xxl-three, .xxl-four, .xxl-five, .xxl-six, .xxl-seven, .xxl-eight, .xxl-nine, .xxl-ten, .xxl-ten, .xxl-eleven, .xxl-twelve, .xxl-thirteen, .xxl-fourteen, .xxl-fifteen, .xxl-sixteen {
+        max-width:none;
+    }
+    .xxl-text-center{text-align:center;}
+    .xxl-break {width:100%;}
+    .xxl-singleline {flex-wrap:nowrap;}
+    .xxl-multiline {flex-wrap:wrap;}
+    .xxl-equal > *{width:0%;flex-grow:1;}
+	.xxl-first {order:-1;}
+    .xxl-last {order:999;}
+    
+}
+
+.self-no-gutter {
+    padding-right:0px!important;  
+    padding-left:0px!important;   
+}
+.no-gutter > * {
+    padding-right:0px!important;  
+    padding-left:0px!important;   
+}
+
+.fluid {
+    max-width:none;
+}

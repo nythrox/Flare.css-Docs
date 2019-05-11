@@ -1,0 +1,265 @@
+.menu {
+    padding:30px;
+    display:flex;
+}
+.menu ul {
+    width:100%;
+    display:flex;
+    list-style:none;
+    justify-content:space-between;
+    font-family:"Work Sans";
+}
+.menu ul li:not(:first-child) a{
+    color: rgba(0,0,0,.6);
+}
+.menu ul li a {
+    text-decoration: none
+}
+.menu ul li a:hover {
+    color:black;
+}
+.menu ul li {
+    margin-right:20px;
+}
+.information {
+    background:#1f1f1f;
+    color:white;
+    bottom:0;
+    right:0;
+    padding:40px;
+}
+.about {
+    padding:50px 20px;
+}
+@media (min-width:920px) {
+.header {
+    max-height:90vh;
+    overflow: hidden;
+}
+.about{
+    padding:150px 20px;
+    margin-top:70px;
+}
+}
+.information a {
+    color:#fff;
+    text-decoration:none;
+}
+h1 {
+    font-size: 37.4px;
+    line-height: 1.2;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+h5 {
+    font-size: 16.5px;
+    line-height: 1.4;
+    color: #b2b2b2;
+    font-family: 'Work Sans';
+    font-weight:300;
+    letter-spacing: -.6px;
+}
+h6 {
+    font-size: 16.5px;
+    line-height: 1.4;
+    font-family: 'Work Sans';
+    font-weight: 400;
+    letter-spacing: -.6px;
+}
+.column > a {
+    text-decoration:none;
+    padding: 0;
+    line-height: 1.7;
+    background: 0 0;
+    position: relative;
+    padding-right: 46px;
+    margin-bottom:20px;
+    display:block;
+}
+.column > a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left:10px;
+    width: 26px;
+    background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2222%22%20height%3D%2214%22%20viewBox%3D%220%200%2022%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23f3c565%22%20stroke-width%3D%222%22%20d%3D%22M14.4%201l5.8%205.9-5.8%206%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23f3c565%22%20d%3D%22M0%206h18.8v2H0z%22%2F%3E%0A%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 5px) 50%;
+    transition: background-position .2s ease-out;
+}
+h6 span {
+    color: #f1bc4d;
+}
+p {
+    
+    font-family: Karla;
+    font-size: 16.5px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(0,0,0,.6);
+}
+.primary-button {
+    
+    padding: 20px 40px;
+    line-height: 58px;
+    font-size: 16.5px;
+    background-color: #f3c565;
+    color: #000;
+    transition:background-color .3s;
+}
+.primary-button:hover {
+    background-color: #f1bc4d;
+}
+a {
+    color:black;   
+    font-family: 'Work Sans';
+    font-size: 15.5px;
+}
+.about{
+    background:url(https://demo.yootheme.com/themes/joomla/2018/yard/images/yootheme/home-about-bg.svg)no-repeat;
+    background-size: auto;
+    background-position:50% 10%;
+}
+.about-gallery .column{
+    padding:0 30px;
+}
+    .about-gallery .column:nth-child(1){
+        padding-top:50px;
+    }
+    @media (min-width:920px) {
+       
+.residences {
+    background:url(https://demo.yootheme.com/themes/joomla/2018/yard/images/yootheme/home-residences-bg.svg) no-repeat;
+    background-size: 100% auto;
+}
+
+    }
+.residences-gallery .column{
+    padding:40px;
+}
+.residences-text {
+    padding:20px;
+}
+.projects {
+margin-top:50px;
+}
+.projects-text {
+    padding:60px;
+}
+.projects-gallery > div{
+    padding:20px;
+}
+.projects-gallery .column {
+    
+    overflow-x:hidden;
+}
+.projects-gallery .column img{
+    transition:.5s all;
+}
+.projects-gallery .column:hover img{
+    transform:scale(1.1);
+}
+.projects-gallery .absolute{
+    color:white;
+    top:auto;
+    padding:50px 50px;
+}
+.projects-gallery a {
+    color: rgba(255,255,255,.6);
+    text-decoration:none;
+}
+.projects-gallery .absolute h1 {
+font-size:20px;
+}
+
+.services {
+background:url(https://demo.yootheme.com/themes/joomla/2018/yard/images/yootheme/home-services-bg.svg) no-repeat;
+background-position:10% 10%;
+padding:50px 0;
+margin-top:150px;
+}
+.services-title {
+    padding:30px;
+
+}
+.services-gallery .column{
+padding:20px;
+}
+@media (min-width:900px) {
+.services-gallery .column:first-child{
+padding-top:150px;
+}}
+.services-text {
+    padding:30px;
+}
+.news {
+padding:30px;
+}
+.news-title {
+
+}
+.news-gallery > .column:nth-child(1) {
+    padding:30px;
+    padding-left:0px
+}
+.news-gallery > .row .column{
+    padding:30px 30px 0 0;
+}
+.news-gallery .column .absolute{
+    transition:.5s all;
+}
+.news-gallery .column:hover .absolute {
+    background:rgba(243,197,101,.8);
+}
+.news-gallery .absolute {
+    padding:30px 60px 30px 30px;
+    color:white;
+}
+.news-gallery .absolute h1 {
+    font-size:20px;
+}
+
+footer {
+    background:#1f1f1f;
+}
+footer .newsletter .column{
+    padding:30px;
+    color:white;
+}
+.newsletter input {   
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    padding:15px;
+    font-family:"Work Sans";
+    font-weight: 500;
+    background-color: transparent;
+    color: rgba(255,255,255,.7);
+    background-clip: padding-box;
+    border-color: rgba(255,255,255,.5)!important;
+}
+.newsletter button{
+    top:0;cursor: pointer;
+    color:rgba(255,255,255,.5);
+    height:100%;
+    right:0;
+    border:none;
+    background:none;
+}
+button svg{
+color:rgba(255,255,255,.5);
+}
+
+footer .info .column:not(:first-child) {
+    background:white;
+    padding:30px;
+    border-bottom:1px solid #e5e5e5;
+}
+h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: 'Work Sans';
+    letter-spacing: -.5px;
+}

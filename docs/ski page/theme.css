@@ -1,0 +1,328 @@
+/*ui elements*/
+body {
+  font-family: "Muli";
+  background: #f7f7f7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 2.374em;
+  font-weight: 700;
+} /*title*/
+h2 {
+  font-size: 1.928em;
+  margin-bottom: 0.25em;
+  font-weight: 600;
+} /*subtitle*/
+h3 {
+  font-size: 1.44em;
+  margin-bottom: 0.25em;
+}
+h4 {
+  font-size: 1.32em;
+  margin-bottom: 0.25em;
+}
+h5 {
+  font-size: 1.25em;
+  line-height: 1;
+}
+h6 {
+  /*text in a feature/title/hero*/
+  font-size: 1.1em;
+  line-height: 1.32em;
+}
+p {
+  font-size: 1em;
+  margin-bottom: 0.25em;
+} /*text for reading, blog posts, etc*/
+
+h2,
+h3,
+h4,
+p {
+}
+
+header {
+  background: url(heel.png) no-repeat bottom, url(layer.png);
+  background-size: 100% auto, cover;
+  background-attachment: scroll, fixed;
+  color: white;
+  font-family: "Muli";
+  position: relative;
+  padding-bottom: 40px;
+}
+.mountains {
+  z-index: 3;
+}
+.mountains img {
+  width: 100%;
+}
+.heel {
+  z-index:4;
+}
+.boarder {
+  z-index: 3;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  z-index:5;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #10527b1a 70%, #f7f7f7);
+}
+.header-title {
+  font-size: 65px;
+  text-transform: uppercase;
+  color: #5b99d8a3;
+  font-family: "Catamaran";
+  font-weight: 900;
+
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+.header-title span {
+  font-size: 20px;
+  color: #82b0cd;
+  font-weight: bold;
+}
+.header-content {
+  padding-top: 150px;
+  z-index: 4;
+}
+.menu {
+  z-index: 999;
+  position: sticky;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s all;
+}
+.menu a:hover {
+	color: #fafafa;
+	text-decoration: underline;
+}
+.menu ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+.menu ul li {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Muli";
+  padding: 25px;
+}
+.header-parallax {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header-description {
+  z-index: 3;
+  position: relative;
+
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "Muli";
+  font-weight: 400;
+  color: #fefefe;
+  margin-bottom: 50px;
+}
+
+.btn-bg-red {
+  border: 2px solid #ff4709;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #ff4709;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: 0.1s linear;
+  margin-top: 20px;
+}
+.btn-bg-red:hover {
+  mix-blend-mode: screen;
+  border-color: white;
+  color: white;
+}
+.offers {
+  padding: 100px 0;
+}
+.offers h1 {
+  font-family: "Catamaran";
+  font-weight: 900;
+  color: #333333;
+  letter-spacing: 1px;
+}
+.offers img {
+	height:150px;
+	width:auto;
+	margin:auto;
+	margin-top:30px;
+}
+.offers .column {
+	padding:30px;
+}
+.offers p {
+font-size: 14px;
+letter-spacing:0px;
+line-height: 32px;
+color: #565656;
+font-family: "Muli";
+font-weight: 400;
+text-align: center;
+}
+.offers span {
+	font-size: 14px;
+letter-spacing: 0px;
+text-transform: uppercase;
+color: #565656;
+font-family: "Muli";
+margin-top:20px;
+font-weight: 300;
+display: block;
+}
+.offers h4 {
+font-size: 24px;
+letter-spacing: 0px;
+color: #333333;
+font-family: "Catamaran";
+font-weight: 900;
+text-transform: uppercase;
+margin-top:20px;
+text-align: center;
+}
+.gallery .column img {
+  width: 100%;
+}
+.team {
+	padding:50px;
+}
+.team .column {
+  padding: 50px;
+}
+.team .title {
+	margin-top: 50px;
+	font-size: 24px;
+letter-spacing: 0px;
+color: #333333;
+font-family: "Catamaran";
+font-weight: 900;
+text-align: center;
+}
+.team img {
+  border-radius: 50%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.team span {font-size: 14px;
+	letter-spacing: 0px;
+	color: #565656;
+	font-family: "Muli";
+	font-weight: 300;
+	display: block;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.team p {
+	text-transform: uppercase;
+font-size: 24px;
+letter-spacing: 0px;
+color: #333333;
+font-family: "Catamaran";
+font-weight: 900;
+text-align: center;
+}
+
+
+.hero {
+	background:url(hero.png) bottom;
+	background-size: cover;
+	padding:100px 20px; 
+}
+@media(max-width:901px) {
+  .hero {
+    background:url(hero.png) top;
+    background-size: auto 160%;
+}
+}
+.hero h1 {
+	
+  font-family: "Catamaran";
+  font-weight: 900;
+	color: #2f2f2f;
+	letter-spacing: 1px;
+	text-transform:uppercase;font-size: 44px;
+
+}
+.hero p {
+	
+font-size: 18px;
+letter-spacing: 0px;
+line-height: 32px;
+color: #2b2b2b;
+font-family: "Muli";
+font-weight: 300;
+}
+.hero .t-equal-three span{
+	margin-top:30px;
+	display: block;
+font-size: 64px;
+letter-spacing: 1px;
+line-height: 24px;
+color: #ff690f;
+font-family: "Catamaran";
+font-weight: 900;
+}
+
+footer .contact {
+  padding: 70px 40px;
+  background: #2f2f2f;
+  color: white;
+}
+footer .contact p:not(:last-child) {
+  margin-bottom: 20px;
+}
+footer .contact p {
+  font-size: 13px;
+  color: #dadadaab;
+}
+footer .contact h1 {
+	
+  font-family: "Catamaran";
+  font-weight: 900;
+	color: white;
+	letter-spacing: 1px;
+	text-transform:uppercase;font-size: 44px;
+margin-bottom:20px;
+}
+footer .flexbox p {
+	padding-left:10px;
+}
+footer .social img {
+	margin-right:30px;
+	margin-top: 20px;
+}
+footer p {
+	margin-bottom:20px;
+}
+.maps{
+	background: url(map.png)
+}

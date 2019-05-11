@@ -1,0 +1,262 @@
+html {
+    scroll-behavior: smooth;
+  }
+  .menu {
+    width:100%;
+    position:absolute;
+    display: flex;
+    font-family:Dense;
+    padding:0 100px;
+    letter-spacing: 2;
+    font-weight: bold;
+}
+.menu ul {
+    justify-content:space-between;
+    display:flex;
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);
+    padding:30px;
+    flex-grow:1;
+}
+.menu > li {
+    padding:30px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    flex-grow:1;
+    list-style: none;
+}
+.menu ul li {
+    text-transform: uppercase;
+}
+.menu a {
+    color:white;
+    text-decoration:none;
+}
+
+
+
+header {
+    background:url(background.jpg) bottom;
+    background-size: cover;
+}
+h1 {
+    font-size:50px;
+    font-family: "Playfair Display";
+    margin-bottom:20px;
+    font-weight: bold;
+}
+p {
+    font-size:17px;
+    font-weight:300;
+    font-family:"Lato";
+    color:rgb(78, 78, 78); 
+    margin-bottom:40px;
+    line-height:2;
+}
+header h1 {
+    color:white;
+}
+header p {
+    line-height:1.5;
+    color:rgb(255,255,255,0.8);
+
+}
+.header-content{
+    min-height:100vh;
+    padding-top:200px;
+}
+.header-items {
+    margin-top:100px;
+    margin-bottom:-100px;
+}
+.header-items .column {
+    padding:15px;
+    text-align:center;
+}
+
+
+.card {
+    padding:30px;
+    border-radius: 2px;
+    background-color:white;
+    box-shadow:10px 10px 50px rgba(0, 0, 0, 0.178);
+}
+.card img{
+    margin:auto;
+    width:50px;
+    margin-bottom:30px;
+} 
+.items .column {
+    transition:all 1s;
+    padding:20px 50px;
+    margin-top:190px;
+    position: relative;
+}
+.items {
+margin-bottom:200px;
+}
+.items .card-content {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.items .card{
+    height:175px;
+    box-shadow: none;
+    background-color:#f8f8f8;
+    background-image:url(http://wineprotec.com/img/grapes.png);
+    /* background-image:url(http://futailles.com/assets/images/bottle-shadow.png);
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+.items img {
+    width:100%;
+}
+h2 {
+    color:black;
+    font-weight:900;
+    font-family:"Catamaran";
+}
+
+.items h2 {
+    color:rgb(65, 65, 65);
+    font-family:"Semper";
+    font-weight: 400;
+}
+
+.btn-red {
+    padding:10px 25px;
+    background:#cc1a45;
+    color:white;
+    border-radius:4px;
+    text-transform: uppercase;
+    font-family:"Dense";
+    letter-spacing: 4;
+    font-size:1.3rem;
+    transition:.25s all;
+    text-decoration:none;
+}
+
+.btn-red:hover {
+    background-color: #f6b740;
+}
+
+.experience {
+    padding:200px 25px 25px 0px;
+}
+.experience .column {
+    padding:40px 40px 40px 40px;
+}
+span {
+    color:#da262a;
+}
+.materials {
+    margin-top:100px;
+    padding:100px 0;
+    background-color:#f1efe9;
+    background-image:url(http://wineprotec.com/img/grapes.png),url(bg.jpg);
+    background-size:40%;
+    background-position:right, left;
+    background-repeat:  no-repeat;
+}
+.materials .column {
+    padding:0 30px;
+}
+.material-image {
+    margin-bottom:20px;
+}
+.tradition {
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.tradition .bg {
+    background:url(http://wineprotec.com/img/experience.png);
+    background-size:100% 100%;
+    padding:50px;
+}
+.bg img {
+    display:block;
+    margin-left:auto;
+}
+.hero {
+    padding:200px 20px;
+    background:url(hero-bg.jpg) no-repeat;
+    background-size:cover;
+    position: relative;
+}
+.hero::after {
+    content:'';
+    position: absolute;
+    top:0;bottom:0;right:0;left:0;
+    background: rgb(0,0,0,0.8);
+}
+.hero h1 {
+    color:white;
+    margin-bottom:50px;
+}
+.hero h1, .hero h3, .hero a {
+    position: relative;
+    z-index: 10;
+}
+h3 {
+    text-transform: uppercase;
+    color:white;
+    font-family:Dense;
+    font-weight:100;
+    letter-spacing: 5;
+}
+footer {
+    padding:0 30px 50px 30px;
+    font-family:'Roboto';
+}
+footer .column {
+    padding-top:50px;
+    color:rgb(65, 65, 65);
+}
+footer ul li:first-child {
+    color:black;
+    font-family:Dense!important;
+    letter-spacing: 3;
+    font-size:30px;
+    font-weight: bold;
+}
+footer ul li {    
+    color:rgb(65, 65, 65);
+    margin-bottom:20px;
+}
+@media(max-width:900px){ 
+    .materials {
+        background-size:100% auto,100% 40%;
+        background-position:bottom, top left;
+    }
+ 
+}
+h6 {
+    font-family:"Playfair Display";
+    color:rgb(158, 158, 158);
+}
+@media(max-width:768px) {   
+    .items .column {
+        margin-top:300px;
+    } }  
+@media(min-width:901px){
+    .header-items .column:nth-child(even) {
+        padding-top:70px;
+    } } 
+@media(min-width:1150px) and (max-width:1649px){ } 
+@media(min-width:1650px) and (max-width:2999px){ } 
+@media(min-width:3000px){ }
+
+
+
+
+ 
+@font-face {
+    font-family: Dense;
+    src: url(Dense.woff2);
+  }
+  @font-face {
+      font-family: Semper;
+      src: url(Semper.woff);
+    }
