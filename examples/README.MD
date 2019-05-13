@@ -24,8 +24,8 @@
   <a href="https://nythrox.github.io/Flare.css-Docs/examples/LANDING-PAGE/index.html">Landing Page</a>
 
 <p>Credits:</p>
-<a href="https://yootheme.com/themes/yard">YooTheme</a>
-<a href="https://www.behance.net/gallery/74534649/Ski-Snowboard-School-Free-Template">Inna Prudka</a>
-<a href="https://dribbble.com/shots/3500615-Wineprotec-minisite">Ondrej Kostolňák</a>
+<a href="https://yootheme.com/themes/yard">YooTheme - </a>
+<a href="https://www.behance.net/gallery/74534649/Ski-Snowboard-School-Free-Template">Inna Prudka - </a>
+<a href="https://dribbble.com/shots/3500615-Wineprotec-minisite">Ondrej Kostolňák - </a>
 <a href="https://brave.com/">Brave</a>
 <br>
