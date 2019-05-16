@@ -12,8 +12,8 @@
 <a href="https://github.com/nythrox/Flare.css-Docs/">Documentation »</a>
 </b>
 </p>
-<h1 align="center">Made With Flare</h1>
-<p>A few pages made with Flare to show how powerful it is! Check out in how many lines they were made.</p>
+<h1 align="center"><a href="https://github.com/nythrox/Flare.css-Docs/tree/master/examples">Made With Flare</a></h1>
+<p>A few pages made with Flare to show how it can be used.</p>
 
   <a href="https://nythrox.github.io/Flare.css-Docs/examples/YARD/index.html">Yard</a>
   <br>
