@@ -11,6 +11,8 @@
 <b>
 <a href="https://nythrox.github.io/Flare.css-Docs/docs/index.html">Documentation with Visual Examples »</a>
 </b>
+<br>
+  <a href="https://github.com/nythrox/Flare.css-Docs/blob/master/README.pt.md"><B>Português</B></a>
 </p>
 <h1>Documentation</h1>
 <h2>Breakpoints</h2>
