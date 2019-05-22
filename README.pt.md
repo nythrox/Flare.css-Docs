@@ -9,7 +9,7 @@
 </p>
 <p align = "center">
 <b>
-<a href="https://nythrox.github.io/Flare.css-Docs/docs/index.html"> Documentação com exemplos visuais »</a>
+<a href="https://nythrox.github.io/Flare.css-Docs/docs/index-portugues.html"> Documentação com exemplos visuais »</a>
 </b>
 <br>
   <a href="https://github.com/nythrox/Flare.css-Docs/"> <B> English </B> </a>
