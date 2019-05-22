@@ -11,6 +11,10 @@
     <link rel="icon" href="flare.png" />
 
     <style>
+      a {
+        color:black;
+        line-height:150%;
+      }
       .menu {
         border-right: 1px solid rgba(0, 0, 0, 0.14);  
         position:fixed;
@@ -64,10 +68,27 @@
         text-align: center;
         border:1px solid white;
       }
+      th {
+        background:grey!important;
+        padding:20px;
+        border:2px solid white;
+        font-weight:bold;
+        color:white;
+      }
+      td {
+        border:1px solid white;
+        padding:10px;
+      }
+      tr:nth-child(odd) {
+        background:rgba(255, 99, 71, 0.548);
+      }
+      tr:nth-child(even) {
+        background:rgba(135, 207, 235, 0.418);
+      }
       .example .column:nth-child(even) {
         background: tomato;
       }
-      .example .column:nth-child(odd) {
+      .example .column:nth-child(odd){
         background: skyblue;
       }
       .example .title {
@@ -96,26 +117,24 @@
       <ul>
           <li>Grid</li>
           <li>Introduction</li>
-      </ul> -->
-    </section>
-    <div class="row row container t-sixteen" id="content">
+      </ul> 
+    </section>-->
+    <div class="row size-fifteen t-sixteen" id="content">
         <section class="part"> 
-          <h1>Introduction</h1>
+          <h1>Introdução</h1>
           <p>
-            The idea behind flare is to be able to let you program layouts with less lines of code and give you more options for building, without limiting you in any ways or making your website slow.
-          </p>
+          
+A ideia por trás do flare é permitir que você programe layouts com menos linhas de código e ofereça mais opções de criação, sem limitá-lo de qualquer maneira ou tornando o seu site lento.</p>
           <p>
-            Automatic Responsiveness, Flexbox, different row containers, being lightweight and short readable code are the main differencials that flare has from bootstrap, but they are all optional and do not restrict or limit how you program, or interfere with other frameworks..
-          </p>
+       
+Responsividade automática, Flexbox, linhas diferentes, sendo leve e curto código legível são os principais diferenciais que flare tem de bootstrap, mas eles são todos opcionais e não restringem ou limitam a forma como você programa ou interfere com outras estruturas.   </p>
         </section>
         <section class="part">
           <h1>Column</h1>
-          <p>
-            Columns are the building blocks of flare. We give them sizes and add
-            content inside of them.
+          <p>As colunas são os blocos de construção do flare. Nós lhes damos tamanhos e acrescentamos conteúdo dentro deles.
           </p>
-          <P>Flare can have up to 16 columns in each row.</P>
-          <div class="example row row container ">
+          <P>Flare pode ter até 16 colunas em cada linha.</P>
+          <div class="example row ">
 
               <div class="column m-sixteen">16</div>
               <div class="column m-one">1</div>
@@ -135,11 +154,9 @@
               <div class="column m-one">1</div>
               <div class="column m-one">1</div>
           </div>
-          <p>
-            A column can have a size of one to sixteen, one being 6.25% of the
-            row container and sixteen being 100%.
+          <p>Uma coluna pode ter um tamanho de um a dezesseis, sendo um 6,25% da linha e dezesseis sendo 100%.
           </p>
-          <p>Flexbox attributes:</p>
+          <p>Atributos do Flexbox:</p>
           <ul>
             <li>number</li>
             <li>breakpoint-number</li>
@@ -147,94 +164,97 @@
             <li>equal-number</li>
             <li>breakpoint-equal-number</li>
           </ul>
-          <h1>Automatic Responsiveness</h1>
-          <p>You set the size you wish the columns to be on desktop and flare will find a ideal size for them on other devices.</p>
-          <div class="row row container fluid example">
+          <h1>Responsividade Automática
+            </h1>
+          <p>Você define o tamanho que deseja que as colunas estejam na tela de computador e o flare encontrará um tamanho ideal para elas em outros dispositivos.</p>
+          <div class="row fluid example">
             <div class="column nine">nine</div>
             <div class="column seven">seven</div>
           </div>
-          <div class="row row container fluid text-center">
+          <div class="row fluid text-center">
             <div class="column title">
-              <h4>row row container equal-three</h4>
+              <h4>row equal-three</h4>
             </div>
           </div>
-          <div class="example row row container equal-three">
+          <div class="example row equal-three">
             <div class="column">column</div>
             <div class="column">column</div>
             <div class="column">column</div>
           </div>
-          <h1>Manual Responsiveness (bootstrap-like)</h1>
-          <p>You define the sizes of the columns on each device by using the tags m (mobile), t (tablet), c (computer). </p>
-          <p>For each breakpoint you choose, the size you set counts for itself and up. Example: <code>t-ten</code> will mean the column will have size 10 on tablets, computers and up.</p>
-          <div class="row row container fluid example">
+          <h1>Responsividade manual (semelhante a bootstrap)</h1>
+          <p>
+              Você define os tamanhos das colunas em cada dispositivo usando as tags m (celular), t (tablet), c (computador).</p>
+          <p>
+              Para cada ponto de interrupção escolhido, o tamanho que você define conta para si e para cima. Exemplo: <code>t-ten</code> significa que a coluna terá tamanho 10 em tablets, computadores e acima.</p>
+          <div class="row fluid example">
             <div class="column m-sixteen c-nine">m-sixteen t-nine</div>
             <div class="column m-sixteen c-seven">m-sixteen t-seven</div>
           </div>
-          <div class="row row container fluid text-center">
+          <div class="row fluid text-center">
             <div class="column title">
-              <h4>row row container m-equal-one t-equal-three</h4>
+              <h4>row m-equal-one t-equal-three</h4>
             </div>
           </div>
-          <div class="example row row container m-equal-one c-equal-three">
+          <div class="example row m-equal-one c-equal-three">
             <div class="column">column</div>
             <div class="column">column</div>
             <div class="column">column</div>
-          </div>  <h1>Combining both</h1>
-          <p>You can choose a automatic responsiveness and then overwrite it on specific breakpoints. Example: <code>column eight t-eight</code> means that flare will handle responsiveness on all devices exept tablets, where the column will take the size of eight.</p>
-          <P>When using breakpoints in combination with automatic responsiveness, breakpoints no longer count for themselves and up, they count only for themselvs. Example: <code>column twelve t-sixteen</code> instead of t-sixteen counting for tablet and up, it will only give the column size 16 at tablet.</P>
+          </div>  <h1>Combinando Automatico & Manual</h1>
+          <p>Você pode escolher a capacidade de resposta automática e, em seguida, substituí-la em pontos de interrupção específicos. Exemplo: <code>column eight t-eight</code> significa que o Flare cuidará da responsividade em todos os dispositivos, exceto tablets, na qual a coluna terá o tamanho de oito.</p>
+          <P>
+              Ao usar breakpoints em combinação com responsividade automática, os breakpoints não contam mais para eles próprios e para cima, eles contam apenas para si próprios. Exemplo: <code>column twelve t-sixteen</code> em vez de t-sixteen contar para tablet e para cima, ele só vai dar o tamanho da coluna(16) no tablet.</P>
         </section>
 
         <section class="part">
-                <h1>row row container</h1>
-                <p>row row containers are used to set items side by side.</p>
-                <p>With a row row container, you can define the size of the row row container and the size of the columns inside of it (unless they get overwritten)</p>
-                <p>They can also be used to limit the total size of the content, centralizing it in the screen.</p>
-                <p>Inside of row row containers, columns behave with a block behavior.</p>
-                <p>Block behavior: Collumns will have defined sizes that will not grow or shrink, and their content will fit inside them.</p>
-                <p>row row container attributes:</p>
+                <h1>Row & Container</h1>
+                <p>Rows são usadas para deixar colunas lado a lado.</p>
+                <p>Com um row, você pode definir o tamanho da row e o tamanho das colunas dentro dela (a menos que sejam sobrescritas)</p>
+                <p>Rows também podem ser usados para limitar o tamanho total do conteúdo, centralizando-o na tela.</p>
+                <p>Dentro das Rows, as colunas se comportam com um comportamento de bloco.</p>
+                <p>Comportamento de blocos: as colunas terão tamanhos definidos que não aumentarão ou diminuirão, e seu conteúdo caberá dentro deles.</p>
+                <p>Atributos de Row:</p>
                 <ul>
-                  <li>row row container fluid</li>
-                  <li>row row container</li>
+                  <li>row fluid</li>
+                  <li>row</li>
                   <li>small, medium</li>
-                  <li>size-number</li>
-                  <li>breakpoint-number</li>
+                  <li>size-(one..sixteen)</li>
+                  <li>breakpoint-(one..sixteen)</li>
                 </ul>
 
                 <br />
-                <div class="row row container fluid text-center">
-                  <div class="column title"><h2>row row container fluid</h2></div>
+                <div class="row fluid text-center">
+                  <div class="column title"><h2>row fluid</h2></div>
                 </div>
-                <div class="row row container fluid example">
+                <div class="row fluid example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title"><h2>row container</h2></div>
                 </div>
                 <div class="row container example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
-                  <div class="column title"><h2>row container medium</h2></div>
+                <div class="row fluid text-center">
+                  <div class="column title"><h2>row medium</h2></div>
                 </div>
-                <div class="row container medium example">
+                <div class="row medium example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
-                  <div class="column title"><h2>row container small</h2></div>
+                <div class="row fluid text-center">
+                  <div class="column title"><h2>row small</h2></div>
                 </div>
-                <div class="row container small example">
+                <div class="row small example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title">
                     <h2>row size-ten</h2>
                     <p>
-                      has a size of ten on computer and up, while letting flare handle
-                      mobile and tablet
+                      tem um tamanho de dez no computador e Flare decide o tamanho em outras telas
                     </p>
                   </div>
                 </div>
@@ -242,26 +262,27 @@
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title">
-                    <h2>row m-twelve t-ten c-eight</h2>
+                    <h2>row m-twelve t-ten size-eight</h2>
                     <p>
-                      will have a size of twelve on mobile, and a size of ten on
-                      tablet and a size of eight on computer and up
+                      terá um tamanho de doze no celular, e um tamanho de dez no tablet e um tamanho de oito no computador e acima
+
                     </p>
                   </div>
                 </div>
-                <div class="row margin-auto m-twelve t-ten c-eight example">
+                <div class="row margin-auto m-twelve t-ten size-eight example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
               </section>
         <section class="part">
           <h1>Flexbox</h1>
-          <p>Flexboxes are used to set items side by side.</p>
-          <p>Inside of flexbox, columns behave with a flex behavior.</p>
-          <p>Flex behavior: Collumns will be sized according to their contents, and will always try to grow to fill 100% of the empty space. Columns are more flexible, they will never have an exactly specific width even if you add width attributes.</p>
-          <p>Flexbox attributes:</p>
+          <p>Flexboxes são usados para deixar colunas lado a lado.</p>
+          <p>Dentro do flexbox, as colunas se comportam com um comportamento flexível.</p>
+          <p>
+              Comportamento do Flex: as colunas serão dimensionadas de acordo com seu conteúdo e sempre tentarão crescer para preencher 100% do espaço horizontal vazio.</p>
+          <p>Atributos de Flexbox:</p>
           <ul>
             <li>multiline</li>
             <li>equal</li>
@@ -272,29 +293,24 @@
           </ul>
           <br>
           <div class="example">
-                <div class="row container fluid text-center">
-                  <div class="column title"><h2>flexbox</h2>all the columns
-                    resize
-                    according to the
-                    size
-                    of their content
-                    unless you add a number
+                <div class="row fluid text-center">
+                  <div class="column title"><h2>flexbox</h2>todas as colunas mudam de tamanho de acordo com seu conteudo
                 </div>
               <div class="flexbox">
-                    <div class="column">all the columns</div>
-                    <div class="column">resize</div>
-                    <div class="column">according to the</div>
-                    <div class="column">size</div>
-                    <div class="column">of their content</div>
-                    <div class="column six">(six) unless you add a number</div>
+                    <div class="column">todas as colunas</div>
+                    <div class="column">mudam de tamanho de acordo</div>
+                    <div class="column">com</div>
+                    <div class="column">o tamanho</div>
+                    <div class="column">de seu conteudo</div>
+                    <div class="column six">a menos que você coloque um tamanho especifico (six) </div>
               </div>
             </div>
 
           <br>
           <div class="example">
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title"><h2>flexbox equal</h2>
-                <p>columns no longer adapt to the size of their content, but now they will always have an equal size</p></div>
+                <p>as colunas não se adaptam mais ao tamanho do conteúdo, mas agora elas sempre terão um tamanho igual</p></div>
                 </div>
               <div class="flexbox equal">
                     <div class="column">column</div>
@@ -308,9 +324,10 @@
 
           <br>
           <div class="example">
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title"><h2>flexbox m-equal-three multiline</h2>
-                <p>from mobile and up will each line have three columns, and when overflowing the columns will break into a new line</p></div>
+              <p>do celular para cima cada row terá três colunas, e quando transbordando as colunas vão entrar em uma nova linha</p>
+              </div>
                 </div>
               <div class="flexbox m-equal-three multiline">
                     <div class="column">column</div>
@@ -323,14 +340,171 @@
             </div>
         </section>
         <section class="part">
-            <h1>Automatic Responsiveness</h1>
-            <p>When giving a column a certain size <code>column eight</code> , you tell flare that you want it's size to be eight (half) at a computer screen, and flare will handle responsiveness on tablet and mobile.</p>
+            <h1>Responsividade Automática</h1>
+            <p>
+                Ao dar a uma coluna um tamanho de <code>column eight</code>, você diz que você quer que o tamanho seja oito (metade) na tela do computador, e o flare decidir os tamanhos no tablet e no celular.</p>
             <br>
-            <p>If you dont like the result on a certain screen size, you can always add a extra modifier <code>column eight t&#8209;twelve</code> &#8209; Flare will handle on mobile, but on tablet it will have the size of twelve</p>
+            <p>Se você não gostar do resultado em um determinado tamanho de tela, poderá adicionar uma breakpoint extra <code>column eight t&#8209;twelve</code> - o Flare tratará a responsividade em todos os tamanhos, menos no tablet que a coluna terá o tamanho de doze
+              </p>
             <br>
-            <p>Or if you dont want to use automatic responsiveness at all, you can build from mobile up using the breakpoint tags <code>column m&#8209;sixteen t&#8209;fourteen c&#8209;twelve</code> Without automatic responsiveness, each breakpoint tag counts for itself and up (Example: t&#8209;eight will make the column size eight for tablet, computer, television, etc)</p>
+            <p>Ou, se você não quiser responsividade automática, poderá construir a partir de breakpoints usando tags <code>column m&#8209;sixteen t&#8209;fourteen c&#8209;twelve</code> Sem utilizar responsividade automática, cada tag de breakpoint conta para si e para cima (Exemplo: t-eight fará o tamanho da coluna oito para tablet, computador, televisão, e acima)</p>
         </section>
+        
+<h2>Tags para mudar o tamanho das colunas:</h2>
+* = tem breakpoints (m- t- c- lg- xl- xxl-)
+<br>
+Tagas de Colunas Individuais você coloca nas colunas: <code>column self-stretch self-auto</code>
+<br>
+Tagas de Todas as Colunas você coloca na Row e aplicará a todas as colunas dentro destre Row: <code>row stretch auto</code> 
+<br>
+<table>
+    <tr>
+      <th>Colunas Individuais</th>
+      <th>Colunas Individuais (oposto)</th>
+      <th>Todas as Colunas</th>
+      <th>Todas as Colunas (oposto)</th>
+    </tr>
+  <tr>
+      <td>self-grow</td>
+      <td>self-nogrow</td>
+      <td>grow</td>
+      <td>nogrow</td>
+  </tr>
+  <tr>
+      <td>self-stretch</td>
+      <td>self-nostretch</td>
+      <td>stretch</td>
+      <td>nostretch</td>
+  </tr>
+  <tr>
+      <td>self-shrink</td>
+      <td>self-noshrink</td>
+      <td>shrink</td>
+      <td>noshrink</td>
+  </tr>
+  <tr>
+      <td>self-fill</td>
+      <td>---</td>
+      <td>fill</td>
+      <td>---</td>
+  </tr>
+  <tr>
+      <td>self-auto</td>
+      <td>---</td>
+      <td>auto</td>
+      <td>---</td>
+  </tr>
+</table>
 
+<h2>Posicionamento Horizontal</h2>
+* = has breakpoints (m- t- c- lg- xl- xxl-)
+<br>
+<table>
+  <tr>
+    <th>Colunas Individuais</th>
+    <th>Todas as Colunas</th>
+  </tr>
+  <tr>
+      <td>self-left</td>
+      <td>left</td>
+  </tr>
+  <tr>
+      <td>self-right</td>
+      <td>right</td>
+  </tr>
+  <tr>
+      <td>first*</td>
+      <td>---</td>
+  </tr>
+  <tr>
+      <td>last*</td>
+      <td>---</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>center</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>space-around</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>space-between</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>normal</td>
+  </tr>
+  <tr>
+      <td>self-mx-auto</td>
+      <td>mx-auto</td>
+  </tr>
+</table>
+<h2>Positionamento Vertical</h2>
+<table>
+  <tr>
+    <th>Colunas Individuais</th>
+    <th>Todas as colunas</th>
+  </tr>
+  <tr>
+      <td>self-top</td>
+      <td>top</td>
+  </tr>
+  <tr>
+      <td>self-bottom</td>
+      <td>bottom</td>
+  </tr>
+  <tr>
+      <td>self-middle</td>
+      <td>middle</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-top</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-bottom</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-middle</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-stretch</td>
+  </tr>
+</table>
+
+<section>
+  <h1>Exemplos de atributos</h1>
+  <div class="example row equal-six">
+    <div class="column self-auto">auto</div>
+    <div class="column self-grow">self-grow</div>
+    <div class="column m-five t-five">m-five t-five</div>
+    <div class="column first">first</div>
+    <div class="column self-shrink">self-shrink</div> 
+    <div class="column lg-twelve">lg-twelve</div>
+    <div class="column self-fill">fill (tamanho é de acordo com o espaço vazio restante no row)</div>
+    <div class="column last self-right">last self-right</div>
+    <div class="column self-stretch">self-stretch</div>
+  </div>
+</section>
+<section>
+  
+<h1 align="left"><a href="https://github.com/nythrox/Flare.css-Docs/tree/master/examples">Criado com Flare</a></h1>
+<p>Sites feitos com Flare.css</p>
+
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/YARD/index.html">Yard</a>
+  <br>
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/STAY&SKI/index.html">Stay & Ski</a>
+  <br>
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/WINEPROTEC/index.html">WineProtec</a>
+  <br>
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/LANDING-PAGE/index.html">Landing Page</a>
+
+</section>
     </div>
   </body>
 </html>

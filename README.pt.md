@@ -9,7 +9,7 @@
 </p>
 <p align = "center">
 <b>
-<a href="https://nythrox.github.io/Flare.css-Docs/docs/index-portugues.html"> Documentação com exemplos visuais »</a>
+<a href="https://nythrox.github.io/Flare.css-Docs/docs/index.html"> Documentação com exemplos visuais »</a>
 </b>
 <br>
   <a href="https://github.com/nythrox/Flare.css-Docs/"> <B> English </B> </a>
@@ -168,6 +168,8 @@ self-positivo | self-negativo | grupo positivo | grupo negativo
 self-grow | self-nogrow | grow | nogrow
 self stretch | self-nostretch | stretch | nostretch
 self-shrink | self-noshrink | shrink | noshrink
+self-fill | --- | fill | ---
+self-auto | --- | auto | ---
 
 <h2> Posicionamento Horizontal </h2>
 * = tem breakpoints (m-t-c-lg-xl-xxl-)
@@ -202,8 +204,6 @@ self-middle | middle
 tag | descrição
 ------ | ------
 number * | tamanho da coluna no ponto de interrupção *. número pode ser qualquer valor de um a dezesseis
-fill | ocupa todo o espaço vazio
-auto | tamanho de acordo com seu conteúdo
 title | largura sempre de 100%
 break * | quebra a linha
 auto-no-gutter | não terá paddig

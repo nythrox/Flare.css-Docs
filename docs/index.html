@@ -11,6 +11,10 @@
     <link rel="icon" href="flare.png" />
 
     <style>
+      a {
+        color:black;
+        line-height:150%;
+      }
       .menu {
         border-right: 1px solid rgba(0, 0, 0, 0.14);  
         position:fixed;
@@ -64,10 +68,27 @@
         text-align: center;
         border:1px solid white;
       }
+      th {
+        background:grey!important;
+        padding:20px;
+        border:2px solid white;
+        font-weight:bold;
+        color:white;
+      }
+      td {
+        border:1px solid white;
+        padding:10px;
+      }
+      tr:nth-child(odd) {
+        background:rgba(255, 99, 71, 0.548);
+      }
+      tr:nth-child(even) {
+        background:rgba(135, 207, 235, 0.418);
+      }
       .example .column:nth-child(even) {
         background: tomato;
       }
-      .example .column:nth-child(odd) {
+      .example .column:nth-child(odd){
         background: skyblue;
       }
       .example .title {
@@ -96,16 +117,16 @@
       <ul>
           <li>Grid</li>
           <li>Introduction</li>
-      </ul> -->
-    </section>
-    <div class="row row container t-sixteen" id="content">
+      </ul> 
+    </section>-->
+    <div class="row size-fifteen t-sixteen" id="content">
         <section class="part"> 
           <h1>Introduction</h1>
           <p>
             The idea behind flare is to be able to let you program layouts with less lines of code and give you more options for building, without limiting you in any ways or making your website slow.
           </p>
           <p>
-            Automatic Responsiveness, Flexbox, different row containers, being lightweight and short readable code are the main differencials that flare has from bootstrap, but they are all optional and do not restrict or limit how you program, or interfere with other frameworks..
+            Automatic Responsiveness, Flexbox, different rows, being lightweight and short readable code are the main differencials that flare has from bootstrap, but they are all optional and do not restrict or limit how you program, or interfere with other frameworks..
           </p>
         </section>
         <section class="part">
@@ -114,8 +135,8 @@
             Columns are the building blocks of flare. We give them sizes and add
             content inside of them.
           </p>
-          <P>Flare can have up to 16 columns in each row.</P>
-          <div class="example row row container ">
+          <P>Flare can have up to 16 columns in each line.</P>
+          <div class="example row ">
 
               <div class="column m-sixteen">16</div>
               <div class="column m-one">1</div>
@@ -137,7 +158,7 @@
           </div>
           <p>
             A column can have a size of one to sixteen, one being 6.25% of the
-            row container and sixteen being 100%.
+            row and sixteen being 100%.
           </p>
           <p>Flexbox attributes:</p>
           <ul>
@@ -149,16 +170,16 @@
           </ul>
           <h1>Automatic Responsiveness</h1>
           <p>You set the size you wish the columns to be on desktop and flare will find a ideal size for them on other devices.</p>
-          <div class="row row container fluid example">
+          <div class="row fluid example">
             <div class="column nine">nine</div>
             <div class="column seven">seven</div>
           </div>
-          <div class="row row container fluid text-center">
+          <div class="row fluid text-center">
             <div class="column title">
-              <h4>row row container equal-three</h4>
+              <h4>row equal-three</h4>
             </div>
           </div>
-          <div class="example row row container equal-three">
+          <div class="example row equal-three">
             <div class="column">column</div>
             <div class="column">column</div>
             <div class="column">column</div>
@@ -166,16 +187,16 @@
           <h1>Manual Responsiveness (bootstrap-like)</h1>
           <p>You define the sizes of the columns on each device by using the tags m (mobile), t (tablet), c (computer). </p>
           <p>For each breakpoint you choose, the size you set counts for itself and up. Example: <code>t-ten</code> will mean the column will have size 10 on tablets, computers and up.</p>
-          <div class="row row container fluid example">
+          <div class="row fluid example">
             <div class="column m-sixteen c-nine">m-sixteen t-nine</div>
             <div class="column m-sixteen c-seven">m-sixteen t-seven</div>
           </div>
-          <div class="row row container fluid text-center">
+          <div class="row fluid text-center">
             <div class="column title">
-              <h4>row row container m-equal-one t-equal-three</h4>
+              <h4>row m-equal-one t-equal-three</h4>
             </div>
           </div>
-          <div class="example row row container m-equal-one c-equal-three">
+          <div class="example row m-equal-one c-equal-three">
             <div class="column">column</div>
             <div class="column">column</div>
             <div class="column">column</div>
@@ -185,51 +206,51 @@
         </section>
 
         <section class="part">
-                <h1>row row container</h1>
-                <p>row row containers are used to set items side by side.</p>
-                <p>With a row row container, you can define the size of the row row container and the size of the columns inside of it (unless they get overwritten)</p>
+                <h1>Row & Container</h1>
+                <p>Rows are used to set items side by side.</p>
+                <p>With a row, you can define the size of the row and the size of the columns inside of it (unless they get overwritten)</p>
                 <p>They can also be used to limit the total size of the content, centralizing it in the screen.</p>
-                <p>Inside of row row containers, columns behave with a block behavior.</p>
+                <p>Inside of rows, columns behave with a block behavior.</p>
                 <p>Block behavior: Collumns will have defined sizes that will not grow or shrink, and their content will fit inside them.</p>
-                <p>row row container attributes:</p>
+                <p>row attributes:</p>
                 <ul>
-                  <li>row row container fluid</li>
-                  <li>row row container</li>
+                  <li>row fluid</li>
+                  <li>row</li>
                   <li>small, medium</li>
                   <li>size-number</li>
                   <li>breakpoint-number</li>
                 </ul>
 
                 <br />
-                <div class="row row container fluid text-center">
-                  <div class="column title"><h2>row row container fluid</h2></div>
+                <div class="row fluid text-center">
+                  <div class="column title"><h2>row fluid</h2></div>
                 </div>
-                <div class="row row container fluid example">
+                <div class="row fluid example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title"><h2>row container</h2></div>
                 </div>
                 <div class="row container example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
-                  <div class="column title"><h2>row container medium</h2></div>
+                <div class="row fluid text-center">
+                  <div class="column title"><h2>row medium</h2></div>
                 </div>
-                <div class="row container medium example">
+                <div class="row medium example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
-                  <div class="column title"><h2>row container small</h2></div>
+                <div class="row fluid text-center">
+                  <div class="column title"><h2>row small</h2></div>
                 </div>
-                <div class="row container small example">
+                <div class="row small example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title">
                     <h2>row size-ten</h2>
                     <p>
@@ -242,16 +263,16 @@
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title">
-                    <h2>row m-twelve t-ten c-eight</h2>
+                    <h2>row m-twelve t-ten size-eight</h2>
                     <p>
                       will have a size of twelve on mobile, and a size of ten on
                       tablet and a size of eight on computer and up
                     </p>
                   </div>
                 </div>
-                <div class="row margin-auto m-twelve t-ten c-eight example">
+                <div class="row margin-auto m-twelve t-ten size-eight example">
                   <div class="column half">half</div>
                   <div class="column half">half</div>
                 </div>
@@ -272,7 +293,7 @@
           </ul>
           <br>
           <div class="example">
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title"><h2>flexbox</h2>all the columns
                     resize
                     according to the
@@ -292,7 +313,7 @@
 
           <br>
           <div class="example">
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title"><h2>flexbox equal</h2>
                 <p>columns no longer adapt to the size of their content, but now they will always have an equal size</p></div>
                 </div>
@@ -308,7 +329,7 @@
 
           <br>
           <div class="example">
-                <div class="row container fluid text-center">
+                <div class="row fluid text-center">
                   <div class="column title"><h2>flexbox m-equal-three multiline</h2>
                 <p>from mobile and up will each line have three columns, and when overflowing the columns will break into a new line</p></div>
                 </div>
@@ -330,7 +351,158 @@
             <br>
             <p>Or if you dont want to use automatic responsiveness at all, you can build from mobile up using the breakpoint tags <code>column m&#8209;sixteen t&#8209;fourteen c&#8209;twelve</code> Without automatic responsiveness, each breakpoint tag counts for itself and up (Example: t&#8209;eight will make the column size eight for tablet, computer, television, etc)</p>
         </section>
+        
+<h2>Tags to define column sizes:</h2>
+* = has breakpoints (m- t- c- lg- xl- xxl-)
+<br>
+<table>
+    <tr>
+      <th>Single Column</th>
+      <th>Single Column Opposite</th>
+      <th>All Columns</th>
+      <th>All Columns Opposite</th>
+    </tr>
+  <tr>
+      <td>self-grow</td>
+      <td>self-nogrow</td>
+      <td>grow</td>
+      <td>nogrow</td>
+  </tr>
+  <tr>
+      <td>self-stretch</td>
+      <td>self-nostretch</td>
+      <td>stretch</td>
+      <td>nostretch</td>
+  </tr>
+  <tr>
+      <td>self-shrink</td>
+      <td>self-noshrink</td>
+      <td>shrink</td>
+      <td>noshrink</td>
+  </tr>
+  <tr>
+      <td>self-fill</td>
+      <td>---</td>
+      <td>fill</td>
+      <td>---</td>
+  </tr>
+  <tr>
+      <td>self-auto</td>
+      <td>---</td>
+      <td>auto</td>
+      <td>---</td>
+  </tr>
+</table>
 
+<h2>Horizontal Positioning</h2>
+* = has breakpoints (m- t- c- lg- xl- xxl-)
+<br>
+<table>
+  <tr>
+    <th>Single Column</th>
+    <th>All Columns</th>
+  </tr>
+  <tr>
+      <td>self-left</td>
+      <td>left</td>
+  </tr>
+  <tr>
+      <td>self-right</td>
+      <td>right</td>
+  </tr>
+  <tr>
+      <td>first*</td>
+      <td>---</td>
+  </tr>
+  <tr>
+      <td>last*</td>
+      <td>---</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>center</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>space-around</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>space-between</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>normal</td>
+  </tr>
+  <tr>
+      <td>self-mx-auto</td>
+      <td>mx-auto</td>
+  </tr>
+</table>
+<h2>Vertical Positioning</h2>
+<table>
+  <tr>
+    <th>Single Column</th>
+    <th>All Columns</th>
+  </tr>
+  <tr>
+      <td>self-top</td>
+      <td>top</td>
+  </tr>
+  <tr>
+      <td>self-bottom</td>
+      <td>bottom</td>
+  </tr>
+  <tr>
+      <td>self-middle</td>
+      <td>middle</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-top</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-bottom</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-middle</td>
+  </tr>
+  <tr>
+      <td>---</td>
+      <td>content-stretch</td>
+  </tr>
+</table>
+
+<section>
+  <h1>Attributes Example</h1>
+  <div class="example row equal-six">
+    <div class="column self-auto">auto</div>
+    <div class="column self-grow">self-grow</div>
+    <div class="column m-five t-five">m-five t-five</div>
+    <div class="column first">first</div>
+    <div class="column self-shrink">self-shrink</div> 
+    <div class="column lg-twelve">lg-twelve</div>
+    <div class="column self-fill">fill (width is equal to empty space)</div>
+    <div class="column last">last</div>
+    <div class="column self-stretch">self-stretch</div>
+  </div>
+</section>
+<section>
+  
+<h1 align="left"><a href="https://github.com/nythrox/Flare.css-Docs/tree/master/examples">Made With Flare</a></h1>
+<p>A few pages made with Flare to show how it can be used.</p>
+
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/YARD/index.html">Yard</a>
+  <br>
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/STAY&SKI/index.html">Stay & Ski</a>
+  <br>
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/WINEPROTEC/index.html">WineProtec</a>
+  <br>
+  <a href="https://nythrox.github.io/Flare.css-Docs/examples/LANDING-PAGE/index.html">Landing Page</a>
+
+</section>
     </div>
   </body>
 </html>

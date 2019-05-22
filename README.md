@@ -180,6 +180,8 @@ self positive | self negative | group positive | group negative
 self-grow | self-nogrow | grow | nogrow
 self-stretch | self-nostretch | stretch | nostretch
 self-shrink | self-noshrink | shrink | noshrink
+self-fill | --- | fill | ---
+self-auto | --- | auto | ---
 
 <h2>Horizontal Positioning</h2>
 * = has breakpoints (m- t- c- lg- xl- xxl-)
@@ -214,8 +216,6 @@ self-middle | middle
 tag | description
 ------ | ------
 number* | column size on * breakpoint. number can be any value from one to sixteen
-fill | occupies all empty space
-auto | size according to its content
 title | always 100% width
 break* | breaks the line
 self-no-gutter | will have no gutter
