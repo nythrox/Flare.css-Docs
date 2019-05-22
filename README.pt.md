@@ -51,27 +51,27 @@
 </code>
 <h2> Coluna </h2>
 <p>
-Uma coluna pode ter um tamanho de um a dezesseis, sendo um * 6,25% do
-container, * oito * sendo 50%, * dezesseis * sendo 100% e assim por diante.
+Uma coluna pode ter um tamanho de um a dezesseis, sendo um 6,25% do
+container, oito sendo 50%, dezesseis sendo 100% e assim por diante.
 </p>
 <h4> Responsividade manual </h4>
 <p> Você define os tamanhos das colunas em cada dispositivo usando as tags m (celular), t (tablet), c (computador). <code> [breakpoint] - (one..sixteen) </code> </p>
-<p> Para cada ponto de interrupção escolhido, o tamanho que você definir contará para o ponto de interrupção e para cima. Exemplo: <code> t-ten </code> significa que a coluna terá tamanho 10 em tablets e acima. </P>
+<p> Para cada breakpoint, o tamanho que você definir será utilizado para o ponto de breakpoint e para cima. Exemplo: <code> t-ten </code> significa que a coluna terá tamanho 10 em tablets e acima. </P>
 
 <h4> Responsividade automática </h4>
-<p> Quando você dá a uma coluna um tamanho de <code> coluna oito </code>, você diz ao flare que deseja que o tamanho seja oito (metade) na tela do computador, e o flare agüenta a capacidade de resposta no tablet e celular. / p>
-<p> Se você não gostar do resultado em um determinado tamanho de tela, poderá sempre adicionar um modificador extra <code> coluna oito a doze </code> - o Flare funcionará no celular, mas no tablet ele terá o tamanho de doze </p>
-Exemplo: <code> coluna quatro </code> A coluna terá um tamanho de quatro no computador e nos outros tamanhos o flare tratará disso. <br> <code> coluna quatro t-tres </code> A coluna terá um tamanho de quatro no computador, no tablet só terá um tamanho de três e em outros tamanhos o flare vai lidar com isso.
+<p> Quando você dá a uma coluna um tamanho de <code> column eight </code>, você diz ao flare que deseja que o tamanho seja oito (metade) na tela do computador, e o flare cuidara da responsividade no tablet e celular. </p>
+<p> Se você não gostar do resultado em um determinado tamanho de tela, poderá sempre adicionar um modificador extra <code> column eight t-twelve </code> - o Flare escolherá a responsividade no celular e computador, mas no tablet ele terá o tamanho de doze.</p>
+Exemplo: <code> column four </code> A coluna terá um tamanho de quatro no computador e nos outros tamanhos o flare escolherá o tramanho. <br> <code> column four t-three </code> A coluna terá um tamanho de quatro no computador, no tablet terá um tamanho de três e em outros tamanhos de tela o flare escolherá o tamanho.
 
-<p> Para combinar a capacidade de resposta automática com a capacidade de resposta manual, você pode escolher a capacidade de resposta automática e, em seguida, substituí-la em breakpoints específicos. </p>
-<br> <code> coluna oito t-oito </code> significa que o flare lidará com a capacidade de resposta em todos os dispositivos, exceto tablets, onde a coluna terá o tamanho de oito.
-<P> Ao usar breakpoints em combinação com a capacidade de resposta automática, os breakpoints não contam mais para eles próprios e para cima, eles contam apenas para si próprios. Exemplo: <code> coluna doze t-dezesseis </code> em vez de t-dezesseis contando para tablet e para cima, ele só dará o tamanho da coluna 16 no tablet. </P>
+<p> Para combinar responsividade automática com responsividade manual, você pode escolher responsividade automática e sobrescrever-la em breakpoints específicos. </p>
+<br> <code> coluna eight t-eight </code> significa que o flare lidará com responsividade em todos os dispositivos, exceto tablets, onde a coluna terá o tamanho de oito.
+<P> Ao usar breakpoints em combinação com responsividade automática, os breakpoints não contam mais para eles próprios e para cima, eles contam apenas para si próprios. Exemplo: <code> coluna twelve t-sixteen </code> em vez de t-sixteen valer para tablet e para tamanhos maiores (computador, etc), ele só fará a coluna ter tamanho 16 em tablets. </P>
 
-<h4> Tamanho igual </h4>
-<p> Você também pode definir os tamanhos das colunas adicionando tamanho igual [one..sixteen] ao seu container. Isso significa que todos os containers dentro do container terão o tamanho de [um ... dezesseis], a menos que sejam sobrescritos na tag da coluna.
-<p> Igual tamanho pode ter breakpoints (manual) ou pode ser usado sem breakpoints (capacidade de resposta automática).
+<h4> Colunas com tamahnos iguais </h4>
+<p> Você também pode definir os tamanhos das colunas adicionando equal-[one..sixteen] ao seu container. Isso significa que todas as colunas dentro do container terão o tamanho de [um ... dezesseis], a menos que sejam sobrescritos na tag da coluna.
+<p> Equal-[one...sixteen] pode ter breakpoints (manual) ou pode ser usado sem breakpoints (responsividade automática).
 <br>
-Capacidade de resposta automática (três colunas por linha no computador e flare manipulam o tamanho em outras telas)
+Responsividade automática (três colunas por linha no computador e flare manipula o tamanho em outras telas)
   
 ```
 <div class = "container equal-three">
@@ -91,50 +91,50 @@ Responsividade manual (três colunas por linha no tamanho móvel e acima)
 </div>
 ```
 
-<p> Usar a tag <code> column </code> não é obrigatório, mas é ideal para fácil segmentação por CSS. Você pode mudá-lo para qualquer nome que quiser, apenas mantenha-o consistente! </P>
+<p> Usar a tag <code> column </code> não é obrigatório, mas é ideal para um CSS organizado. Você pode mudá-lo para qualquer nome que quiser (ex: coluna), mas mantenha-o consistente! </P>
 
-<p> Principais tags de dimensionamento para colunas: number *, equal-number *, equal * </p>
-<p> Principais tags de alinhamento para colunas: primeiro *, último *, auto-esquerda, auto-direita, auto-top, auto-bottom, auto-média, stretch, grow, shrink </p>
+<p> Principais tags para definir tamanhos de colunas: number *, equal-number *, equal * </p>
+<p> Principais tags de alinhamento de colunas: first *, last *, self-left, self-right, self-top, self-bottom, middle-média, stretch, grow, shrink </p>
 
-* = tem breakpoints (m-t-c-lg-xl-xxl-), se usar não usando ponto de interrupção, em seguida, flare lida com sua capacidade de resposta
+* = tem breakpoints (m-t-c-lg-xl-xxl-), se usar não usando ponto de interrupção, em seguida, flare lida com sua responsividade
 
 <h1> Row & Flexbox </h1>
-<p> Linhas e Flexboxes são usados ​​para definir itens lado a lado. </p>
-<p> Você pode adicionar um tamanho à linha para limitar o tamanho total do conteúdo, centralizando-o na tela. </p>
+<p> Rows e Flexboxes são usados ​​para deixar itens lado a lado. </p>
+<p> Você pode adicionar um tamanho ao row para limitar o tamanho de seu conteúdo, centralizando-o na tela. </p>
 
-<p> Dentro de linhas, as colunas se comportam com um comportamento de bloco. </p>
+<p> Dentro de row, as colunas se comportam com um comportamento de bloco. </p>
 <p> Dentro do flexbox, as colunas se comportam com um comportamento flexível. </p>
 <h4> Comportamento padrão do bloco: </h4>
-  Os collumns terão tamanhos definidos que não crescerão (nogrow). <br>
+  Os colunas terão tamanhos definidos que não crescerão horizontalmente (nogrow). <br>
   Colunas em uma linha não têm o mesmo tamanho vertical (nostretch). <br>
-  Colunas transbordando saltarão para a próxima linha (multilinha). <br>
+  Colunas transbordando saltarão para a próxima linha (multiline). <br>
 
 <h4> Comportamento padrão do Flex: </h4>
-  Colunas são dimensionadas de acordo com o tamanho de seu conteúdo (automático). <br>
-  Colunas em uma linha têm o mesmo tamanho vertical (alongamento). <br>
-  Colunas crescerão para preencher todo o espaço vazio (crescer). <br>
+  Colunas são dimensionadas de acordo com o tamanho de seu conteúdo (auto). <br>
+  Colunas crescerão para preencher todo o espaço vazio horizontal (grow). <br>
+  Colunas em uma linha têm o mesmo tamanho vertical (stretch). <br>
   Colunas encolherão para caber em uma linha (singleline). </P> <br>
   
-<p> Todos os comportamentos padrão podem ser sobrescritos com tags (aumentar, diminuir, múltiplas linhas, automático, numérico, igual, etc ...) </p>
+<p> Todos os comportamentos padrão podem ser sobrescritos com tags (grow, shrink, multiline, auto, equal, etc ...) </p>
 
-Tamanhos de container: container, fluido, pequeno, médio, tamanho-número *
+Tamanhos de container: container, fluid, small, medium, size-number *
 <br>
-Sobrescrever tags de comportamento: crescer, alongar, encolher, linha única, múltiplas linhas, número do tamanho *, igual *, igual-número *
+Sobrescrever tags de comportamento: grow, stretch, shrink, singleline, multiline, size-number *, equal *, equal-number *
 <br>
-* = tem breakpoints (m-t-c-lg-xl-xxl-), se usar não usando ponto de interrupção, em seguida, flare lida com sua capacidade de resposta
+* = tem breakpoints (m-t-c-lg-xl-xxl-)
 
 <h2> Mais exemplos </h2>
-<h3> Uma linha + container cujas colunas têm o tamanho de um terço no computador e em outras telas, tamanhos de alças de flare </h3>
+<h3> Uma linha + container cujas colunas têm o tamanho de um terço no computador e em outras telas flare define os tamanhos </h3>
 
 ```
-<div class = "recipiente de linha igual a três">
+<div class = "row equal-three">
     <div class = "column"> </div>
     <div class = "column"> </div>
     <div class = "column"> </div>
 </div>
 ```
 
-<h3> Uma linha + container cujas colunas têm o tamanho de um terço no tablet e acima, e a primeira coluna tem um tamanho de 100% no tablet e até </h3>
+<h3> Um row + container cujas colunas têm o tamanho de um terço no tablet e acima, e a primeira coluna tem um tamanho de 100% no tablet </h3>
 
 ```
 <div class = "container t-equal-three">
@@ -144,7 +144,7 @@ Sobrescrever tags de comportamento: crescer, alongar, encolher, linha única, m�
 </div>
 ```
 
-<h3> Uma linha + container cujas colunas têm o tamanho de um quarto no computador e flare agüenta a capacidade de resposta em outras telas (igual a três), mas as colunas serão forçadas a ter o tamanho de um terço de largura no tablet (t-igual -three), e a primeira coluna terá um tamanho de 100% no tablet (t-dezesseis) </h3>
+<h3> Uma row + container cujas colunas têm o tamanho de um quarto no computador e flare cuida da responsividade em outras telas (equal-three), mas as colunas terão o tamanho de um terço de largura no tablet (t-igual -three), e a primeira coluna terá um tamanho de 100% no tablet (t-dezesseis) </h3>
 
 ```
 <div class = "row equal-four t-equal-three">
@@ -159,75 +159,75 @@ Sobrescrever tags de comportamento: crescer, alongar, encolher, linha única, m�
 <h1> Atributos: </h1>
 <p> Coluna </p>
 <p> container e flexbox </p>
-<h4> Tags para colocar em uma coluna </h4>
+<h4> Tags para definir o tamanho de colunas</h4>
 * = tem breakpoints (m-t-c-lg-xl-xxl-)
 <br>
 
-auto positivo | auto negativo | grupo positivo | grupo negativo
+self-positivo | self-negativo | grupo positivo | grupo negativo
 ------------- | ------------- | ------------- | -------------
-auto-crescimento | auto-nogrow | crescer | nogrow
-auto esticar | auto-nostretch | estiramento | nostretch
-auto-encolher | auto-noshrink | encolher | noshrink
+self-grow | self-nogrow | grow | nogrow
+self stretch | self-nostretch | stretch | nostretch
+self-shrink | self-noshrink | shrink | noshrink
 
 <h2> Posicionamento Horizontal </h2>
 * = tem breakpoints (m-t-c-lg-xl-xxl-)
 <br>
 
-auto | grupo
+self | grupo
 ------------- | -------------
-auto-esquerda | esquerda
-auto-direita | certo
-primeiro * | ---
-último * | ---
---- | Centro
---- | espaço ao redor
---- | espaço entre
+self-left | left
+self-right | right
+first * | ---
+last * | ---
+--- | center
+--- | space-around
+--- | space-between
 --- | normal
-auto-mx-auto | mx-auto
+self-mx-auto | mx-auto
 
 <h2> Posicionamento Vertical </h2>
 
-auto | grupo
+self | grupo
 -------- | -----
-auto-top | topo
-auto-fundo | inferior
-auto-médio | meio
+self-top | top
+self-bottom | bottom
+self-middle | middle
  | content-top
- | conteúdo-fundo
- | conteúdo-meio
+ | content-bottom
+ | content-middle
  | content-stretch
  
 <h2> Dimensionamento da coluna </h2>
 
 tag | descrição
 ------ | ------
-número * | tamanho da coluna no ponto de interrupção *. número pode ser qualquer valor de um a dezesseis
-preencher | ocupa todo o espaço vazio
+number * | tamanho da coluna no ponto de interrupção *. número pode ser qualquer valor de um a dezesseis
+fill | ocupa todo o espaço vazio
 auto | tamanho de acordo com seu conteúdo
-título | sempre largura de 100%
-quebra * | quebra a linha
-auto-não-sarjeta | não terá sarjeta
+title | largura sempre de 100%
+break * | quebra a linha
+auto-no-gutter | não terá paddig
 
 <h4> Tags para colocar em um container que modifique colunas </h4>
 
 tag | descrição
 ------ | ------
-número igual * | número de colunas no ponto de interrupção * dentro dessa linha. número pode ser qualquer valor de um a doze
+equal-number * | número de colunas no breakpoint * dentro dessa linha. número pode ser qualquer valor de um a doze
 flexbox | colunas dentro dessa fila se comportarão com o comportamento flexível
-igual * | colunas dentro desta linha terão uma largura igual
-não-sarjeta | colunas dentro desta linha não terão sarjeta
-todo o centro | centro de texto, colunas centralizadas verticalmente e horizontalmente
-itens centralizados | colunas centradas verticalmente e horizontalmente
-conteúdo centralizado | conteúdo centrado verticalmente e horizontalmente
+equal * | colunas dentro desta linha terão uma largura igual
+no-gutter | colunas dentro desta linha não terão padding
+all-center | texto centralizado, colunas centralizadas verticalmente e horizontalmente
+items-center | colunas centradas verticalmente e horizontalmente (align-items:center)
+content-center | conteúdo centrado verticalmente e horizontalmente (align-content:center)
 
 <p> Atributos de Linha e Flexbox: </p>
 
 tag | descrição
 ------ | ------
-linha | colunas dentro desta linha terão comportamento de bloco padrão
+row | colunas dentro desta linha terão comportamento de bloco padrão
 flexbox | colunas dentro deste flexbox terão comportamento padrão flex
-recipiente, fluido, pequeno, médio | recipientes de tamanhos diferentes
-tamanho-número * | define o tamanho do container. número pode ser qualquer valor de um a dezesseis
+container, fluid, small, medium | recipientes de tamanhos diferentes
+size-number * | define o tamanho do container. número pode ser qualquer valor de um a dezesseis
 singleline * | no ponto de interrupção *, a linha será uma linha única
 multilinha * | flexbox pode ter várias linhas
 fullheight | terá uma altura de 100vh
@@ -237,15 +237,15 @@ nomax | não terá largura máxima
 
 tag | descrição
 ------ | ------
-centro de texto * | no texto * brekapoint será centralizado
-ocultar * | no ponto de interrupção * o item será escondido
-relativo | terá posição: parente
-absoluto | terá posição: absoluta
-cobrir | esquerda: 0; direita: 0; top: 0; fundo: 0;
+text-center * | no breakpoint * o texto será centralizado
+hide * | no breakpoint * o item será escondido
+relative | terá position: relative
+absolute | terá position: absolute
+cover | left: 0; right: 0; top: 0; bottom: 0;
 
 <h1> Suporte ao navegador </h1>
 <ul>
-  <li> Últimas 2 versões FF, Chrome, Safari Mac </li>
+<li> Últimas 2 versões FF, Chrome, Safari Mac </li>
 <li> IE 11 + </li>
 <li> Android 4.4+, Chrome para Android 44 + </li>
 <li> iOS Safari 7 + </li>

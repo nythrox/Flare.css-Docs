@@ -68,7 +68,7 @@ Example:<code>column four</code> The column will have a size of four on computer
 <P>When using breakpoints in combination with automatic responsiveness, breakpoints no longer count for themselves and up, they count only for themselves. Example: <code>column twelve t-sixteen</code> instead of t-sixteen counting for tablet and up, it will only give the column size 16 at tablet.</P>
 
 <h4>Equal Size</h4>
-<p>You can also set the sizes of columns by adding equal-size-[one..sixteen] to its container. It means that all containers inside of the container will have the size of [one...sixteen] unless overwritten on the column tag.
+<p>You can also set the sizes of columns by adding equal-size-[one..sixteen] to its container. It means that all columns inside of the container will have the size of [one...sixteen] unless overwritten on the column tag.
 <p>Equal Size can have breakpoints (manual) or it can be used without breakpoints (automatic responsiveness).
 <br>
 Automatic Responsiveness (three columns per line on computer and flare handles the size on other screens)
@@ -160,7 +160,7 @@ Overwrite behavior tags: grow, stretch, shrink, singleline, multiline, size-numb
 <h1>Attributes:</h1>
 <p>Column</p>
 <p>container and flexbox</p>
-<h4>Tags to put in a column</h4>
+<h4>Tags to define column sizes</h4>
 * = has breakpoints (m- t- c- lg- xl- xxl-)
 <br>
 
