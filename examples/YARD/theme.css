@@ -149,7 +149,7 @@ margin-top:50px;
     padding:20px;
 }
 .projects-gallery .column {
-    
+    overflow-y: hidden;
     overflow-x:hidden;
 }
 .projects-gallery .column img{
